@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 *,
 *::before,
 *::after {
@@ -22,3 +23,16 @@ body {
 body {
   font-size: 1.6rem;
   color: white; }
+
+.home {
+  font-size: 1.6rem; }
+  .home h1 {
+    font-family: "Questrial", sans-serif;
+    font-size: 4rem;
+    color: #D7E0FE;
+    font-size: 80rem;
+    font-size: 10rem;
+    background: -webkit-linear-gradient(#D7E0FE, #05299E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 5rem; }
