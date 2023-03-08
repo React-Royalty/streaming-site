@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "react-scripts start",
-    "compile:sass": "node-sass src/sass/main.scss src/components/style.css -w"
+    "compile:sass": "node-sass src/components/sass/main.scss src/components/css/style.css -w"
   },
   "keywords": [],
   "author": "React Royalty",
@@ -19,5 +19,17 @@
   },
   "devDependencies": {
     "node-sass": "^7.0.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

@@ -6,7 +6,7 @@ import App from './components/App'
 import Home from './components/Home'
 import ErrorPage from './components/ErrorPage'
 
-const appElement = documnet.getElementById('app')
+const appElement = document.getElementById('app')
 const root = createRoot(appElement)
 export const router = createBrowserRouter([
   {
