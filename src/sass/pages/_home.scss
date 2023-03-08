@@ -1,0 +1,19 @@
+.home {
+  font-size: 1.6rem;
+
+  h1 {
+    font-family: $font-logo;
+    font-size: 4rem;
+    color: $color-test-1;
+
+    font-size: 80rem;
+    font-size: 10rem;
+    background: -webkit-linear-gradient($color-test-1, $color-test-2);
+    // background: -webkit-linear-gradient(white, darkblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin: 5rem;
+  }
+
+}
