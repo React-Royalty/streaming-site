@@ -50,15 +50,29 @@ body {
   height: 8vh;
   box-sizing: border-box;
   background-color: #000; }
-  .home-nav__logo {
+  .home-nav__logo--large {
     height: 4rem;
     margin-left: 3rem;
     margin-bottom: .4rem;
     transition: all .2s;
     align-self: center;
     cursor: pointer; }
-    .home-nav__logo:hover {
+    .home-nav__logo--large:hover {
       transform: scale(1.05); }
+    @media only screen and (max-width: 56.25em) {
+      .home-nav__logo--large {
+        display: none; } }
+  .home-nav__logo--small {
+    height: 4rem;
+    align-self: center;
+    margin-left: 2rem; }
+    @media only screen and (min-width: 56.25em) {
+      .home-nav__logo--small {
+        display: none; } }
+    @media only screen and (max-width: 31.25em) {
+      .home-nav__logo--small {
+        margin-left: 0;
+        height: 3rem; } }
   .home-nav__search-form {
     flex: 0 0 40%;
     display: flex;
@@ -75,6 +89,11 @@ body {
     width: 90%;
     transition: all .2s;
     margin-right: -3.25rem; }
+    @media only screen and (max-width: 37.5em) {
+      .home-nav__search-input {
+        min-width: 25rem; }
+        .home-nav__search-input:focus {
+          min-width: 28rem; } }
     .home-nav__search-input:focus {
       outline: none;
       width: 100%;
@@ -100,6 +119,9 @@ body {
     align-items: center;
     margin-right: 2rem;
     cursor: pointer; }
+    @media only screen and (max-width: 31.25em) {
+      .home-nav__user {
+        margin-right: 0rem; } }
     .home-nav__user:hover .home-nav__user--name {
       color: white; }
     .home-nav__user:hover .home-nav__user--photo {
@@ -110,11 +132,19 @@ body {
       border-radius: 50%;
       border: 2px solid gray;
       transition: all .3s; }
+      @media only screen and (max-width: 31.25em) {
+        .home-nav__user--photo {
+          height: 3rem;
+          width: 3rem;
+          margin-right: 0; } }
   .home-nav__user-icon-box {
     margin-right: 3rem;
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 31.25em) {
+      .home-nav__user-icon-box {
+        margin-right: 0; } }
   .home-nav__user-settings {
     color: gray;
     height: 3.75rem;
@@ -125,6 +155,11 @@ body {
       animation: spin 1s linear infinite;
       transform: scale(1.05);
       color: white; }
+    @media only screen and (max-width: 31.25em) {
+      .home-nav__user-settings {
+        height: 3rem;
+        width: 3rem;
+        margin-right: 0; } }
 
 .home {
   font-size: 1.6rem;

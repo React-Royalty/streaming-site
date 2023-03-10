@@ -13,16 +13,42 @@
 
   // LOGO 
   &__logo {
-    height: 4rem;
-    margin-left: 3rem;
-    margin-bottom: .4rem;
-    transition: all .2s;
-    align-self: center;
-    cursor: pointer;
+ 
 
-    &:hover {
-      transform: scale(1.05);
+    &--large {
+      height: 4rem;
+      margin-left: 3rem;
+      margin-bottom: .4rem;
+      transition: all .2s;
+      align-self: center;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      @media only screen and (max-width: $bp-medium) {
+        display: none;
+      }
+
     }
+
+    &--small {
+      height: 4rem;
+      align-self: center;
+      margin-left: 2rem;
+
+      @media only screen and (min-width: $bp-medium) {
+        display: none;
+      }
+
+      @media only screen and (max-width: $bp-smallest) {
+        margin-left: 0;
+        height: 3rem;
+      }
+    }
+
+
   }
 
   // SEARCHBAR
@@ -45,6 +71,14 @@
     width: 90%;
     transition: all .2s;
     margin-right: -3.25rem;
+
+    @media only screen and (max-width: $bp-small) {
+      min-width: 25rem;
+
+      &:focus {
+        min-width: 28rem;
+      }
+    }
 
     &:focus {
       outline: none;
@@ -87,6 +121,10 @@
     margin-right: 2rem;
     cursor: pointer;
 
+    @media only screen and (max-width: $bp-smallest) {
+      margin-right: 0rem;
+    }
+
     &:hover &--name {
       color: white;
     }
@@ -101,7 +139,14 @@
       border-radius: 50%;
       border: 2px solid lighten(#000, 50);
       transition: all .3s;
+
+      @media only screen and (max-width: $bp-smallest) {
+        height: 3rem;
+        width: 3rem;
+        margin-right: 0;
+      }
     }
+
   }
 
   // SETTINGS
@@ -110,6 +155,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+      margin-right: 0;
+    }
   } 
 
   &__user-settings {
@@ -123,6 +172,12 @@
       animation: spin 1s linear infinite;
       transform: scale(1.05);
       color: white;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      height: 3rem;
+      width: 3rem;
+      margin-right: 0;
     }
   }
 }
