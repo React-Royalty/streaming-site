@@ -1,0 +1,46 @@
+.btn {
+  // anchor
+  text-decoration: none;
+  // button
+  border: none;
+
+  // &:active,
+  // &:visited {
+  //   color: black;
+  // }
+
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+
+  // &__icon {
+
+  // }
+
+  // &__text {
+  //   border: 1px solid blue;
+  // }
+
+
+  &--featured {
+    margin: 1rem;
+    display: inline-block;
+    border-radius: 3px;
+    background-color: lighten(black, 25);
+    width: 15rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2rem;
+    transition: all .4s;
+
+    &:active,
+    &:visited {
+      color: white;
+    }
+
+    &:hover {
+      background-color: black;
+    }
+  }
+}

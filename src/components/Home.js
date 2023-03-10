@@ -4,7 +4,8 @@ import React, { useRef } from 'react'
 import { IoMdSettings } from 'react-icons/io'
 import { BiSearch } from 'react-icons/bi'
 import { GiHamburgerMenu } from 'react-icons/gi'
-import { BsFillCaretLeftFill, BsFillCaretRightFill } from 'react-icons/bs'
+import { BsFillCaretLeftFill, BsFillCaretRightFill, BsFillPlayFill } from 'react-icons/bs'
+import { BiInfoCircle } from 'react-icons/bi'
 
 // function Home() {
 //   if (isLoggedIn) {
@@ -56,7 +57,26 @@ function Home() {
         </div>
       </nav>  {/* Home Nav END */}
 
-      <section className="home__featured">Featured</section>
+      {/* Featured Start */}
+      <section className="featured">
+        <img className="featured__poster" src="https://i.imgur.com/X8X7JS6.png" alt="featured movie poster" />
+        <div className="featured__textbox">
+          <div className="featured__title">
+            <span className="featured__title--main">Spider-Man</span>
+            <span className="featured__title--sub">Into the Spiderverse</span>
+          </div>
+          <p className="featured__description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus
+          </p>
+          <a href="#" className="btn btn--featured">
+            <span className="btn__icon">< BsFillPlayFill /></span>
+            <span className="btn__text"> Play</span></a>
+          <a href="#" className="btn btn--featured">
+            <span className="btn__icon">< BiInfoCircle /></span>
+            <span className="btn__text"> Info</span></a>
+        </div>
+      </section>
+      {/* Featured End */}
 
       <section className="home__slider slider">
         <div className="slider__title">Sing 2</div>

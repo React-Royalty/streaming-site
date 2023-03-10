@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @keyframes spin {
   from {
     transform: rotate(0deg); }
@@ -30,6 +33,7 @@ body {
 
 body {
   font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
   color: white; }
 
 .heading-1 {
@@ -41,6 +45,28 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 5rem; }
+
+.btn {
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  align-items: center;
+  justify-content: center; }
+  .btn--featured {
+    margin: 1rem;
+    display: inline-block;
+    border-radius: 3px;
+    background-color: #404040;
+    width: 15rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2rem;
+    transition: all .4s; }
+    .btn--featured:active, .btn--featured:visited {
+      color: white; }
+    .btn--featured:hover {
+      background-color: black; }
 
 .slider {
   -webkit-touch-callout: none;
@@ -58,7 +84,8 @@ body {
                                 supported by Chrome, Edge, Opera and Firefox */ }
   .slider__title {
     font-size: 3rem;
-    font-family: sans-serif; }
+    font-family: "Oswald", sans-serif;
+    margin-left: 1rem; }
   .slider__box {
     display: flex;
     overflow: scroll;
@@ -99,7 +126,7 @@ body {
     opacity: 0;
     transition: all .4s;
     z-index: 5; }
-    @media only screen and (min-width: 31.25em) {
+    @media only screen and (max-width: 31.25em) {
       .slider__button {
         display: none; } }
     .slider__button--left {
@@ -115,7 +142,33 @@ body {
     position: relative;
     opacity: .75; }
     .slider__card:hover {
-      opacity: 1; }
+      opacity: 1;
+      transform: scale(0.9); }
+
+.featured {
+  position: relative;
+  overflow: hidden; }
+  .featured__poster {
+    width: 100%;
+    position: absolute;
+    top: -50%;
+    z-index: -1; }
+  .featured__textbox {
+    position: absolute;
+    top: 40%;
+    width: 30%;
+    height: 50%;
+    margin-left: 2rem; }
+  .featured__title {
+    font-family: "Anton", sans-serif; }
+    .featured__title--main {
+      display: block;
+      font-size: 7rem; }
+    .featured__title--sub {
+      display: block;
+      font-size: 4rem; }
+  .featured__description {
+    padding: 1rem 0; }
 
 .home-nav {
   position: fixed;
@@ -124,6 +177,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  z-index: 1000;
   height: 8vh;
   box-sizing: border-box;
   background-color: #000; }
@@ -246,5 +300,5 @@ body {
     background-color: grey; }
   .home__slider {
     position: relative; }
-    .home__slider:nth-child(odd) {
+    .home__slider:nth-child(even) {
       background-color: purple; }
