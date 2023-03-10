@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
 
-  height: 10vh;
+  height: 8vh;
 
   box-sizing: border-box;
   background-color: #000;
@@ -11,9 +11,10 @@
   &__logo {
     height: 4rem;
     margin-left: 3rem;
+    margin-bottom: .4rem;
     transition: all .2s;
     align-self: center;
-
+    cursor: pointer;
 
     &:hover {
       transform: scale(1.05);
@@ -76,10 +77,11 @@
 
   // USER
   &__user {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+    cursor: pointer;
 
     &:hover &--name {
       color: white;
@@ -111,6 +113,7 @@
     height: 3.75rem;
     width: 3.75rem;
     transition: all .3s;
+    cursor: pointer;
 
     &:hover {
       animation: spin 1s linear infinite;

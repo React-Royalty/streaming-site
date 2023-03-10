@@ -33,14 +33,16 @@ body {
 .home-nav {
   display: flex;
   justify-content: space-between;
-  height: 10vh;
+  height: 8vh;
   box-sizing: border-box;
   background-color: #000; }
   .home-nav__logo {
     height: 4rem;
     margin-left: 3rem;
+    margin-bottom: .4rem;
     transition: all .2s;
-    align-self: center; }
+    align-self: center;
+    cursor: pointer; }
     .home-nav__logo:hover {
       transform: scale(1.05); }
   .home-nav__search-form {
@@ -82,7 +84,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 2rem; }
+    margin-right: 2rem;
+    cursor: pointer; }
     .home-nav__user:hover .home-nav__user--name {
       color: white; }
     .home-nav__user:hover .home-nav__user--photo {
@@ -102,7 +105,8 @@ body {
     color: gray;
     height: 3.75rem;
     width: 3.75rem;
-    transition: all .3s; }
+    transition: all .3s;
+    cursor: pointer; }
     .home-nav__user-settings:hover {
       animation: spin 1s linear infinite;
       transform: scale(1.05);
