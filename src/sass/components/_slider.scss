@@ -1,5 +1,14 @@
 .slider {
 
+  // Remove Text Selection Highlight
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+
   &__title {
     font-size: 3rem;
     font-family: sans-serif;
@@ -56,6 +65,10 @@
     opacity: 0;
     transition: all .4s;
     z-index: 5;
+
+    @media only screen and (min-width: $bp-smallest) {
+      display: none;
+    }
     
     &--left {
       left: 0;
