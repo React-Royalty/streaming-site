@@ -4,7 +4,8 @@ import React, { useRef } from 'react'
 import { IoMdSettings } from 'react-icons/io'
 import { BiSearch } from 'react-icons/bi'
 import { GiHamburgerMenu } from 'react-icons/gi'
-import { BsFillCaretLeftFill, BsFillCaretRightFill } from 'react-icons/bs'
+import { BsFillCaretLeftFill, BsFillCaretRightFill, BsFillPlayFill } from 'react-icons/bs'
+import { BiInfoCircle } from 'react-icons/bi'
 
 // function Home() {
 //   if (isLoggedIn) {
@@ -67,8 +68,12 @@ function Home() {
           <p className="featured__description">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus
           </p>
-          <a href="#">Play</a>
-          <a href="#">+</a>
+          <a href="#" className="btn btn--featured">
+            <span className="btn__icon">< BsFillPlayFill /></span>
+            <span className="btn__text"> Play</span></a>
+          <a href="#" className="btn btn--featured">
+            <span className="btn__icon">< BiInfoCircle /></span>
+            <span className="btn__text"> Info</span></a>
         </div>
       </section>
       {/* Featured End */}

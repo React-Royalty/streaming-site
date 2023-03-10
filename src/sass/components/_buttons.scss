@@ -1,0 +1,41 @@
+.btn {
+  // anchor
+  text-decoration: none;
+  // button
+
+  &:active,
+  &:visited {
+    color: black;
+  }
+
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+
+  // &__icon {
+
+  // }
+
+  // &__text {
+  //   border: 1px solid blue;
+  // }
+
+
+  &--featured {
+    margin: 1rem;
+    display: inline-block;
+    border-radius: 3px;
+    background-color: lighten(grey, 8);
+    color: black;
+    width: 15rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 600;
+
+    &:hover {
+      background-color: grey;;
+    }
+  }
+}
