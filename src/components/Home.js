@@ -19,7 +19,7 @@ import { BsFillCaretLeftFill, BsFillCaretRightFill } from 'react-icons/bs'
 // }
 
 function Home() {
-  const slider = useRef(null);
+  const slider = useRef(null)
 
   const slideLeft = (event) => {
     slider.current.scroll({ left: slider.current.scrollLeft -500, behavior: 'smooth'}) 
