@@ -2,11 +2,12 @@
   // anchor
   text-decoration: none;
   // button
+  border: none;
 
-  &:active,
-  &:visited {
-    color: black;
-  }
+  // &:active,
+  // &:visited {
+  //   color: black;
+  // }
 
   display: inline-block;
   align-items: center;
@@ -25,17 +26,21 @@
     margin: 1rem;
     display: inline-block;
     border-radius: 3px;
-    background-color: lighten(grey, 8);
-    color: black;
+    background-color: lighten(black, 25);
     width: 15rem;
     padding: 1rem 2rem;
     text-align: center;
     font-size: 2rem;
     line-height: 2rem;
-    font-weight: 600;
+    transition: all .4s;
+
+    &:active,
+    &:visited {
+      color: white;
+    }
 
     &:hover {
-      background-color: grey;;
+      background-color: black;
     }
   }
 }

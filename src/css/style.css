@@ -48,25 +48,25 @@ body {
 
 .btn {
   text-decoration: none;
+  border: none;
   display: inline-block;
   align-items: center;
   justify-content: center; }
-  .btn:active, .btn:visited {
-    color: black; }
   .btn--featured {
     margin: 1rem;
     display: inline-block;
     border-radius: 3px;
-    background-color: #949494;
-    color: black;
+    background-color: #404040;
     width: 15rem;
     padding: 1rem 2rem;
     text-align: center;
     font-size: 2rem;
     line-height: 2rem;
-    font-weight: 600; }
+    transition: all .4s; }
+    .btn--featured:active, .btn--featured:visited {
+      color: white; }
     .btn--featured:hover {
-      background-color: grey; }
+      background-color: black; }
 
 .slider {
   -webkit-touch-callout: none;
