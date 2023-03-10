@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
 *,
 *::before,
 *::after {
@@ -24,6 +30,84 @@ body {
   font-size: 1.6rem;
   color: white; }
 
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  box-sizing: border-box;
+  background-color: #000; }
+  .home-nav__logo {
+    height: 4rem;
+    margin-left: 3rem;
+    transition: all .2s;
+    align-self: center; }
+    .home-nav__logo:hover {
+      transform: scale(1.05); }
+  .home-nav__search-form {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .home-nav__search-input {
+    font-family: sans-serif;
+    font-size: inherit;
+    color: white;
+    background-color: #1a1a1a;
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    transition: all .2s;
+    margin-right: -3.25rem; }
+    .home-nav__search-input:focus {
+      outline: none;
+      width: 100%;
+      background-color: #262626; }
+    .home-nav__search-input::-webkit-input-placeholder {
+      font-weight: 100;
+      color: white; }
+  .home-nav__search-button {
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    display: flex;
+    transform: translateX(-0.5rem); }
+    .home-nav__search-button--icon {
+      height: 2rem;
+      width: 2rem;
+      fill: white; }
+  .home-nav__user-nav {
+    display: flex; }
+  .home-nav__user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem; }
+    .home-nav__user:hover .home-nav__user--name {
+      color: white; }
+    .home-nav__user:hover .home-nav__user--photo {
+      transform: scale(1.05);
+      border: 2px solid white; }
+    .home-nav__user--photo {
+      height: 3.75rem;
+      border-radius: 50%;
+      border: 2px solid gray;
+      transition: all .3s; }
+  .home-nav__user-icon-box {
+    margin-right: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .home-nav__user-settings {
+    color: gray;
+    height: 3.75rem;
+    width: 3.75rem;
+    transition: all .3s; }
+    .home-nav__user-settings:hover {
+      animation: spin 1s linear infinite;
+      transform: scale(1.05);
+      color: white; }
+
 .home {
   font-size: 1.6rem; }
   .home h1 {
@@ -31,7 +115,7 @@ body {
     font-size: 4rem;
     color: #D7E0FE;
     font-size: 80rem;
-    font-size: 10rem;
+    font-size: 25rem;
     background: -webkit-linear-gradient(#D7E0FE, #05299E);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

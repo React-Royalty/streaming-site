@@ -1,0 +1,121 @@
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+
+  height: 10vh;
+
+  box-sizing: border-box;
+  background-color: #000;
+
+  // LOGO 
+  &__logo {
+    height: 4rem;
+    margin-left: 3rem;
+    transition: all .2s;
+    align-self: center;
+
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  // SEARCHBAR
+  &__search-form {
+    flex: 0 0 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__search-input {
+    font-family: sans-serif;
+    font-size: inherit;
+    color: white;
+    background-color: lighten(#000, 10);
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    transition: all .2s;
+    margin-right: -3.25rem;
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: lighten(#000, 15);
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: white;
+    }
+  }
+
+  &__search-button {
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    display: flex;
+    transform: translateX(-.5rem);
+
+
+    &--icon {
+      height: 2rem;
+      width: 2rem;
+      fill: white;
+      // margin-right: .5rem;
+    }
+  }
+
+  // RIGHT SIDE
+  &__user-nav {
+    display: flex;
+  }
+
+  // USER
+  &__user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+
+    &:hover &--name {
+      color: white;
+    }
+
+    &:hover &--photo {
+      transform: scale(1.05);
+      border: 2px solid white;
+    }
+
+    &--photo {
+      height: 3.75rem;
+      border-radius: 50%;
+      border: 2px solid lighten(#000, 50);
+      transition: all .3s;
+    }
+  }
+
+  // SETTINGS
+  &__user-icon-box {
+    margin-right: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+
+  &__user-settings {
+    color: lighten(#000, 50);
+    height: 3.75rem;
+    width: 3.75rem;
+    transition: all .3s;
+
+    &:hover {
+      animation: spin 1s linear infinite;
+      transform: scale(1.05);
+      color: white;
+    }
+  }
+}
