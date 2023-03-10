@@ -4,3 +4,16 @@ body {
   // testing: 
   color: white;
 }
+
+.heading-1 {
+  font-family: $font-logo;
+  font-size: 4rem;
+  color: $color-test-1;
+  
+  font-size: 25rem;
+  background: -webkit-linear-gradient($color-test-1, $color-test-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin: 5rem;
+}
