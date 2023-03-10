@@ -24,11 +24,8 @@
   }
 
   &__slider {
+    position: relative;
 
-    &--title {
-      font-size: 3rem;
-      font-family: sans-serif;
-    }
 
 
     &:nth-child(odd) {
