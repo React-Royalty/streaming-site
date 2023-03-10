@@ -30,7 +30,21 @@ body {
   font-size: 1.6rem;
   color: white; }
 
+.heading-1 {
+  font-family: "Questrial", sans-serif;
+  font-size: 4rem;
+  color: #D7E0FE;
+  font-size: 25rem;
+  background: -webkit-linear-gradient(#D7E0FE, #05299E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 5rem; }
+
 .home-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   height: 8vh;
@@ -113,14 +127,8 @@ body {
       color: white; }
 
 .home {
-  font-size: 1.6rem; }
-  .home h1 {
-    font-family: "Questrial", sans-serif;
-    font-size: 4rem;
-    color: #D7E0FE;
-    font-size: 80rem;
-    font-size: 25rem;
-    background: -webkit-linear-gradient(#D7E0FE, #05299E);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 5rem; }
+  font-size: 1.6rem;
+  display: grid;
+  grid-template-rows: 60rem repeat(6, 25rem); }
+  .home__media-slider:nth-child(odd) {
+    background-color: purple; }

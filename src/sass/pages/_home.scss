@@ -1,18 +1,27 @@
 .home {
   font-size: 1.6rem;
 
-  h1 {
-    font-family: $font-logo;
-    font-size: 4rem;
-    color: $color-test-1;
+  // h1 {
+  //   font-family: $font-logo;
+  //   font-size: 4rem;
+  //   color: $color-test-1;
 
-    font-size: 80rem;
-    font-size: 25rem;
-    background: -webkit-linear-gradient($color-test-1, $color-test-2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  //   font-size: 80rem;
+  //   font-size: 25rem;
+  //   background: -webkit-linear-gradient($color-test-1, $color-test-2);
+  //   -webkit-background-clip: text;
+  //   -webkit-text-fill-color: transparent;
 
-    margin: 5rem;
+  //   margin: 5rem;
+  // }
+
+  display: grid;
+  grid-template-rows: 60rem repeat(6, 25rem);
+
+  &__media-slider {
+
+    &:nth-child(odd) {
+      background-color: purple;
+    }
   }
-
 }

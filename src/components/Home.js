@@ -41,6 +41,44 @@ function Home() {
         </div>
       </nav>  {/* Home Nav END */}
 
+      <section className="home__featured">Featured</section>
+
+      <section className="home__media-slider">Media Slider</section>
+      <section className="home__media-slider">Media Slider</section>
+      <section className="home__media-slider">Media Slider</section>
+      <section className="home__media-slider">Media Slider</section>
+      <section className="home__media-slider">Media Slider</section>
+      <section className="home__media-slider">Media Slider</section>
+
+
+{/*       
+      TEST FIXED POSITION FOR NAVIGATION
+        <p>K</p>
+        <p>K</p>
+        <p>K</p>
+        <p>K</p>
+        <p>K</p>
+        <p>K</p>
+        <p>K</p>
+        <p>K</p>
+        <p>K</p>
+        <p>K</p>
+        <p>K</p>
+        <p>K</p>
+        <p>K</p>
+        <p>K</p>
+        <p>K</p>
+        <p>K</p>
+        <p>K</p>
+        <p>K</p>  
+        <p>K</p>
+        <p>K</p>  
+        <p>K</p>
+        <p>K</p>
+        <p>K</p>
+        <p>K</p>  
+        <p>K</p> */}
+
     </div>
   )
 }
