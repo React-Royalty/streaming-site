@@ -63,7 +63,7 @@ body {
     font-size: 2rem;
     line-height: 2rem;
     transition: all .4s; }
-    .btn--featured:active, .btn--featured:visited {
+    .btn--featured, .btn--featured:active, .btn--featured:visited {
       color: white; }
     .btn--featured:hover {
       background-color: black; }
