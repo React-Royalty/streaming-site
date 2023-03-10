@@ -1,5 +1,6 @@
 .home {
   font-size: 1.6rem;
+  // overflow: none;
 
   // h1 {
   //   font-family: $font-logo;
@@ -18,7 +19,17 @@
   display: grid;
   grid-template-rows: 60rem repeat(6, 25rem);
 
-  &__media-slider {
+  &__featured {
+    background-color: grey;
+  }
+
+  &__slider {
+
+    &--title {
+      font-size: 3rem;
+      font-family: sans-serif;
+    }
+
 
     &:nth-child(odd) {
       background-color: purple;

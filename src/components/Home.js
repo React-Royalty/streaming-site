@@ -2,6 +2,7 @@ import React from 'react'
 
 import { IoMdSettings } from 'react-icons/io'
 import { BiSearch } from 'react-icons/bi'
+import { GiHamburgerMenu } from 'react-icons/gi'
 
 // function Home() {
 //   if (isLoggedIn) {
@@ -44,7 +45,24 @@ function Home() {
 
       <section className="home__featured">Featured</section>
 
-      <section className="home__media-slider">Media Slider</section>
+      <section className="home__slider">
+        <div className="home__slider--title">Sing 2</div>
+        <div className="slider">
+          <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
+          <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
+          <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
+          <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
+          <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
+          <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
+          <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
+          <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
+          <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
+          <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
+          <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
+          <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
+        </div>
+      </section>
+
       <section className="home__media-slider">Media Slider</section>
       <section className="home__media-slider">Media Slider</section>
       <section className="home__media-slider">Media Slider</section>

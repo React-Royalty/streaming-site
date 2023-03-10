@@ -8,7 +8,9 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
 
 html {
   box-sizing: border-box;
@@ -39,6 +41,22 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 5rem; }
+
+.slider {
+  display: flex;
+  overflow: scroll;
+  box-sizing: border-box;
+  width: 100vw;
+  /* Chrome, Safari and Opera */
+  /* IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */ }
+  .slider::-webkit-scrollbar {
+    display: none; }
+  .slider__card {
+    height: 20rem; }
 
 .home-nav {
   position: fixed;
@@ -165,5 +183,10 @@ body {
   font-size: 1.6rem;
   display: grid;
   grid-template-rows: 60rem repeat(6, 25rem); }
-  .home__media-slider:nth-child(odd) {
+  .home__featured {
+    background-color: grey; }
+  .home__slider--title {
+    font-size: 3rem;
+    font-family: sans-serif; }
+  .home__slider:nth-child(odd) {
     background-color: purple; }
