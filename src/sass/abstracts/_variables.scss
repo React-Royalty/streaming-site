@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 // Fonts
 $font-logo: 'Questrial', sans-serif;
-// $font-logo: 'Montserrat Alternates', sans-serif;
 
+$font-header: 'Anton', sans-serif;
+$font-header-2: 'Oswald', sans-serif;
+$font-default: 'Lato', sans-serif;
+
+// COLORS 
 $color-test-1: #D7E0FE;
 $color-test-2: #05299E;
 

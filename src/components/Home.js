@@ -56,7 +56,22 @@ function Home() {
         </div>
       </nav>  {/* Home Nav END */}
 
-      <section className="home__featured">Featured</section>
+      {/* Featured Start */}
+      <section className="featured">
+        <img className="featured__poster" src="https://i.imgur.com/X8X7JS6.png" alt="featured movie poster" />
+        <div className="featured__textbox">
+          <div className="featured__title">
+            <span className="featured__title--main">Spider-Man</span>
+            <span className="featured__title--sub">Into the Spiderverse</span>
+          </div>
+          <p className="featured__description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus
+          </p>
+          <a href="#">Play</a>
+          <a href="#">+</a>
+        </div>
+      </section>
+      {/* Featured End */}
 
       <section className="home__slider slider">
         <div className="slider__title">Sing 2</div>

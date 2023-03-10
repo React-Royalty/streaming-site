@@ -26,9 +26,7 @@
   &__slider {
     position: relative;
 
-
-
-    &:nth-child(odd) {
+    &:nth-child(even) {
       background-color: purple;
     }
   }

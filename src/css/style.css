@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @keyframes spin {
   from {
     transform: rotate(0deg); }
@@ -30,6 +33,7 @@ body {
 
 body {
   font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
   color: white; }
 
 .heading-1 {
@@ -58,7 +62,8 @@ body {
                                 supported by Chrome, Edge, Opera and Firefox */ }
   .slider__title {
     font-size: 3rem;
-    font-family: sans-serif; }
+    font-family: "Oswald", sans-serif;
+    margin-left: 1rem; }
   .slider__box {
     display: flex;
     overflow: scroll;
@@ -117,6 +122,31 @@ body {
     .slider__card:hover {
       opacity: 1; }
 
+.featured {
+  position: relative;
+  overflow: hidden; }
+  .featured__poster {
+    width: 100%;
+    position: absolute;
+    top: -50%;
+    z-index: -1; }
+  .featured__textbox {
+    position: absolute;
+    top: 40%;
+    width: 30%;
+    height: 50%;
+    margin-left: 2rem; }
+  .featured__title {
+    font-family: "Anton", sans-serif; }
+    .featured__title--main {
+      display: block;
+      font-size: 7rem; }
+    .featured__title--sub {
+      display: block;
+      font-size: 4rem; }
+  .featured__description {
+    padding: 1rem 0; }
+
 .home-nav {
   position: fixed;
   top: 0;
@@ -124,6 +154,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  z-index: 1000;
   height: 8vh;
   box-sizing: border-box;
   background-color: #000; }
@@ -246,5 +277,5 @@ body {
     background-color: grey; }
   .home__slider {
     position: relative; }
-    .home__slider:nth-child(odd) {
+    .home__slider:nth-child(even) {
       background-color: purple; }

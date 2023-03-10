@@ -1,0 +1,37 @@
+.featured {
+  position: relative;
+  overflow: hidden;
+
+  &__poster {
+    width: 100%;
+    position: absolute;
+    top: -50%;
+    z-index: -1;
+  }
+
+  &__textbox {
+    position: absolute;
+    top: 40%;
+    width: 30%;
+    height: 50%;
+    margin-left: 2rem;
+  }
+
+  &__title {
+    font-family: $font-header;
+
+    &--main {
+      display: block;
+      font-size: 7rem;
+    }
+
+    &--sub {
+      display: block;
+      font-size: 4rem;
+    }
+  }
+
+  &__description {
+    padding: 1rem 0;
+  }
+}
