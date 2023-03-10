@@ -1,0 +1,86 @@
+.slider {
+
+  &__title {
+    font-size: 3rem;
+    font-family: sans-serif;
+  }
+
+  &__box {
+    display: flex;
+    overflow: scroll;
+    box-sizing: border-box;
+    width: 100vw;
+  
+    position: relative;
+  
+    // HIDE SCROLL
+    /* Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  
+    /* IE, Edge and Firefox */
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
+
+  &__content {
+    display: flex;
+    overflow: scroll;
+    box-sizing: border-box;
+    width: 100vw;
+  
+    position: relative;
+  
+    // HIDE SCROLL
+    /* Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  
+    /* IE, Edge and Firefox */
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
+
+
+  &__button {
+    position: absolute;
+    top: 0%;
+    font-size: 3rem;
+    height: 100%;
+    background: linear-gradient(rgba(black, .5), rgba(black, .5));
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .4s;
+    z-index: 5;
+    
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+
+  }
+
+  &:hover &__button {
+    opacity: 1;
+  }
+
+  &__card{
+    height: 20rem;
+    cursor: pointer;
+    transitioN: all .4s;
+    position: relative;
+    opacity: .75;
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+}
