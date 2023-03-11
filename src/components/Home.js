@@ -71,7 +71,7 @@ function Home() {
           <a href="#" className="btn btn--featured">
             <span className="btn__icon">< BsFillPlayFill /></span>
             <span className="btn__text"> Play</span></a>
-          <a href="#" className="btn btn--featured">
+            <a href="#" className="btn btn--featured">
             <span className="btn__icon">< BiInfoCircle /></span>
             <span className="btn__text"> Info</span></a>
         </div>
