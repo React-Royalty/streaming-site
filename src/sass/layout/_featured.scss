@@ -1,11 +1,12 @@
 .featured {
   position: relative;
   overflow: hidden;
+  margin-top: 5vh;
 
   &__poster {
     width: 100%;
     position: absolute;
-    top: -50%;
+    bottom: 0;
     z-index: -1;
   }
 
@@ -15,6 +16,18 @@
     width: 30%;
     height: 50%;
     margin-left: 2rem;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 40%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 70%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      width: 90%;
+    }
   }
 
   &__title {
@@ -23,6 +36,10 @@
     &--main {
       display: block;
       font-size: 7rem;
+
+      @media only screen and (max-width: $bp-large) {
+        font-size: 5rem;
+      }
     }
 
     &--sub {

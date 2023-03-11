@@ -63,7 +63,10 @@ body {
     font-size: 2rem;
     line-height: 2rem;
     transition: all .4s; }
-    .btn--featured:active, .btn--featured:visited {
+    @media only screen and (max-width: 68.75em) {
+      .btn--featured {
+        width: 12rem; } }
+    .btn--featured, .btn--featured:active, .btn--featured:visited {
       color: white; }
     .btn--featured:hover {
       background-color: black; }
@@ -144,14 +147,18 @@ body {
     .slider__card:hover {
       opacity: 1;
       transform: scale(0.9); }
+      @media only screen and (max-width: 31.25em) {
+        .slider__card:hover {
+          transform: scale(1); } }
 
 .featured {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: 5vh; }
   .featured__poster {
     width: 100%;
     position: absolute;
-    top: -50%;
+    bottom: 0;
     z-index: -1; }
   .featured__textbox {
     position: absolute;
@@ -159,11 +166,23 @@ body {
     width: 30%;
     height: 50%;
     margin-left: 2rem; }
+    @media only screen and (max-width: 68.75em) {
+      .featured__textbox {
+        width: 40%; } }
+    @media only screen and (max-width: 56.25em) {
+      .featured__textbox {
+        width: 70%; } }
+    @media only screen and (max-width: 37.5em) {
+      .featured__textbox {
+        width: 90%; } }
   .featured__title {
     font-family: "Anton", sans-serif; }
     .featured__title--main {
       display: block;
       font-size: 7rem; }
+      @media only screen and (max-width: 68.75em) {
+        .featured__title--main {
+          font-size: 5rem; } }
     .featured__title--sub {
       display: block;
       font-size: 4rem; }
