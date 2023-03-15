@@ -59,7 +59,7 @@ function Home() {
 
       {/* Featured Start */}
       <section className="featured">
-        <img className="featured__poster" src="https://i.imgur.com/X8X7JS6.png" alt="featured movie poster" />
+        <img className="featured__poster" src="https://i.imgur.com/SoGiCOE.png" alt="featured movie poster" />
         <div className="featured__textbox">
           <div className="featured__title">
             <span className="featured__title--main">Spider-Man</span>
