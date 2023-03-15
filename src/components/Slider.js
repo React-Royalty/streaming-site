@@ -1,8 +1,10 @@
 import { useRef } from 'react'
 
-import { BsFillCaretLeftFill, BsFillCaretRightFill, BsFillPlayFill } from 'react-icons/bs'
+// Slider Icons
+import { BsFillCaretLeftFill, BsFillCaretRightFill } from 'react-icons/bs'
 
 function Slider() {
+  // Slider Functionality
   const slider = useRef(null)
 
   const slideLeft = (event) => {
@@ -36,7 +38,7 @@ function Slider() {
             <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
             <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
             <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
-
+            {/* Cards End */}
           </div>
           <div onClick={slideRight} className="slider__button slider__button--right">
             <BsFillCaretRightFill /></div>
