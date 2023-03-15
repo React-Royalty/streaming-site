@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 
+import Slider from './Slider.js'
 
 import { IoMdSettings } from 'react-icons/io'
 import { BiSearch } from 'react-icons/bi'
@@ -20,17 +21,18 @@ import { BiInfoCircle } from 'react-icons/bi'
 // }
 
 function Home() {
-  const slider = useRef(null)
+  // const slider = useRef(null)
 
-  const slideLeft = (event) => {
-    slider.current.scroll({ left: slider.current.scrollLeft -500, behavior: 'smooth'}) 
-    console.log(slider)
-  }
+  // const slideLeft = (event) => {
+  //   slider.current.scroll({ left: slider.current.scrollLeft -500, behavior: 'smooth'}) 
+  //   console.log(slider)
+  // }
 
-  const slideRight = (event) => {
-    slider.current.scroll({ left: slider.current.scrollLeft + 500, behavior: 'smooth'}) 
-    console.log(slider)
-  }
+  // const slideRight = (event) => {
+  //   slider.current.scroll({ left: slider.current.scrollLeft + 500, behavior: 'smooth'}) 
+  //   console.log(slider)
+  // }
+
   return (
     <div className="home">
 
@@ -78,14 +80,14 @@ function Home() {
       </section>
       {/* Featured End */}
 
-      <section className="home__slider slider">
+      {/* <section className="home__slider slider">
         <div className="slider__title">Sing 2</div>
-        {/* SLIDER BOX = CONTENT + BUTTONS */}
+
         <div className="slider__box">
         <div onClick={slideLeft} className="slider__button slider__button--left">
             <BsFillCaretLeftFill /></div>
         <div ref={slider} className="slider__content">
-            {/* Cards Start */}
+
             <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
             <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
             <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
@@ -103,13 +105,19 @@ function Home() {
           <div onClick={slideRight} className="slider__button slider__button--right">
             <BsFillCaretRightFill /></div>
         </div>
-      </section>
+      </section> */}
 
+      <Slider media={shows}/>
+      <Slider media={movies}/>
+      <Slider />
+      <Slider />
+      <Slider />
+      <Slider />
+      {/* <section className="home__slider">Media Slider</section>
       <section className="home__slider">Media Slider</section>
       <section className="home__slider">Media Slider</section>
       <section className="home__slider">Media Slider</section>
-      <section className="home__slider">Media Slider</section>
-      <section className="home__slider">Media Slider</section>
+      <section className="home__slider">Media Slider</section> */}
 
 
 {/*       
