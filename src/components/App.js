@@ -5,6 +5,7 @@ import { fetchMedia } from '../api/media';
 import { meFetch } from '../api/users';
 
 import '../css/style.css'
+import '../css/madi.css'
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
 
     if ( mediaFetchData.success ) {
       setMedia(mediaFetchData.allMedia);
-      // console.log("media!", media);
+      console.log("media!", media);
     } else {
       console.log( mediaFetchData.message );
     }

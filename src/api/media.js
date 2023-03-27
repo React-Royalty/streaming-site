@@ -4,7 +4,7 @@
 export async function fetchMedia() {
   try {
     const response = await fetch(
-      'http://localhost:3001/api/media',
+      'http://localhost:8080/api/media',
       {
         headers: {
           "Content-Type": "application/json"
