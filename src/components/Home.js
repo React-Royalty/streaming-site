@@ -6,6 +6,8 @@ import { BiSearch } from 'react-icons/bi'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { BsFillCaretLeftFill, BsFillCaretRightFill, BsFillPlayFill } from 'react-icons/bs'
 import { BiInfoCircle } from 'react-icons/bi'
+import Slider from './Slider'
+import { useOutletContext } from 'react-router-dom'
 
 // function Home() {
 //   if (isLoggedIn) {
@@ -19,8 +21,11 @@ import { BiInfoCircle } from 'react-icons/bi'
 //   }
 // }
 
-function Home() {
-  const slider = useRef(null)
+const Home = () => {
+
+  const { media } = useOutletContext();
+
+  const slider = useRef(null);
 
   const slideLeft = (event) => {
     slider.current.scroll({ left: slider.current.scrollLeft -500, behavior: 'smooth'}) 
@@ -78,67 +83,11 @@ function Home() {
       </section>
       {/* Featured End */}
 
-      <section className="home__slider slider">
-        <div className="slider__title">Sing 2</div>
-        {/* SLIDER BOX = CONTENT + BUTTONS */}
-        <div className="slider__box">
-        <div onClick={slideLeft} className="slider__button slider__button--left">
-            <BsFillCaretLeftFill /></div>
-        <div ref={slider} className="slider__content">
-            {/* Cards Start */}
-            <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
-            <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
-            <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
-            <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
-            <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
-            <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
-            <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
-            <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
-            <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
-            <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
-            <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
-            <img className="slider__card" src="https://i.imgur.com/bAZ1M84.jpg" />
-
-          </div>
-          <div onClick={slideRight} className="slider__button slider__button--right">
-            <BsFillCaretRightFill /></div>
-        </div>
-      </section>
-
-      <section className="home__slider">Media Slider</section>
-      <section className="home__slider">Media Slider</section>
-      <section className="home__slider">Media Slider</section>
-      <section className="home__slider">Media Slider</section>
-      <section className="home__slider">Media Slider</section>
-
-
-{/*       
-      TEST FIXED POSITION FOR NAVIGATION
-        <p>K</p>
-        <p>K</p>
-        <p>K</p>
-        <p>K</p>
-        <p>K</p>
-        <p>K</p>
-        <p>K</p>
-        <p>K</p>
-        <p>K</p>
-        <p>K</p>
-        <p>K</p>
-        <p>K</p>
-        <p>K</p>
-        <p>K</p>
-        <p>K</p>
-        <p>K</p>
-        <p>K</p>
-        <p>K</p>  
-        <p>K</p>
-        <p>K</p>  
-        <p>K</p>
-        <p>K</p>
-        <p>K</p>
-        <p>K</p>  
-        <p>K</p> */}
+      <Slider category="Category" media={media} />
+      <Slider category="Category" media={media} />
+      <Slider category="Category" media={media} />
+      <Slider category="Category" media={media} />
+      <Slider category="Category" media={media} />
 
     </div>
   )

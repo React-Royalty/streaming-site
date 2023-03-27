@@ -105,6 +105,7 @@ body {
       display: none; }
   .slider__content {
     display: flex;
+    gap: 7px;
     overflow: scroll;
     box-sizing: border-box;
     width: 100vw;
@@ -139,8 +140,9 @@ body {
   .slider:hover .slider__button {
     opacity: 1; }
   .slider__card {
-    height: 20rem;
+    height: 16rem;
     cursor: pointer;
+    border-radius: 3px;
     transitioN: all .4s;
     position: relative;
     opacity: .75; }
