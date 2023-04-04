@@ -23,7 +23,7 @@ import { useOutletContext } from 'react-router-dom'
 
 const Home = () => {
 
-  const { media } = useOutletContext();
+  const { mediaByCategory } = useOutletContext();
 
   const slider = useRef(null);
 
@@ -83,11 +83,11 @@ const Home = () => {
       </section>
       {/* Featured End */}
 
-      <Slider category="Category" media={media} />
-      <Slider category="Category" media={media} />
-      <Slider category="Category" media={media} />
-      <Slider category="Category" media={media} />
-      <Slider category="Category" media={media} />
+      {
+        mediaByCategory.length ? mediaByCategory.map((category, index) => {
+          return <Slider category={category.name} media={category.media} key={index} />
+        }) : <div>Fetching...</div>
+      }
 
     </div>
   )

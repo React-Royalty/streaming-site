@@ -16,8 +16,6 @@ const Slider = ({ category, media }) => {
     setMediaToPost(shuffledMedia);
   }
 
-
-  
   function determinePoster(media) {
     const widePosters = media.posters.filter(poster => poster.wide);
     const randomPoster = widePosters[~~(Math.random() * widePosters.length)];
@@ -25,6 +23,7 @@ const Slider = ({ category, media }) => {
     return media;
   }
 
+  
   function shuffle(media) {
     let currentIndex = media.length, randomIndex;
 
