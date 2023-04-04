@@ -9,7 +9,7 @@ import { HiLockClosed, HiOutlineLockClosed, HiOutlineLockOpen, HiLockOpen } from
 import { BiErrorCircle } from 'react-icons/bi';
 
 
-import { loginFetch, meFetch } from '../api/users';
+import { loginFetch, meFetch } from '../../api/users';
 import { Typography } from '@mui/material';
 
 const Login = () => {

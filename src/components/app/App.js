@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import { fetchCategories } from '../api/categories';
-import { fetchMedia } from '../api/media';
-import { meFetch } from '../api/users';
+import { fetchCategories } from '../../api/categories';
+import { fetchMedia } from '../../api/media';
+import { meFetch } from '../../api/users';
 
-import '../css/style.css'
-import '../css/madi.css'
+import "../../css/style.css";
+import "../../css/madi.css";
 
 function App() {
 
@@ -14,6 +14,9 @@ function App() {
   const [ userData, setUserData ] = useState({});
   const [ media, setMedia ] = useState([]);
   const [ mediaByCategory, setMediaByCategory ] = useState([]);
+  const [ detailedMedia, setDetailedMedia ] = useState({});
+  const [ detailedMediaToggle, setDetailedMediaToggle ] = useState(false);
+
 
 
   useEffect(() => {
@@ -55,7 +58,7 @@ function App() {
   return (
     <div>
 
-      <Outlet context={{ loggedIn, setLoggedIn, userData, setUserData, media, setMedia, mediaByCategory, setMediaByCategory }} />
+      <Outlet context={{ loggedIn, setLoggedIn, userData, setUserData, media, setMedia, mediaByCategory, setMediaByCategory, detailedMedia, setDetailedMedia, detailedMediaToggle, setDetailedMediaToggle }} />
 
     </div>
   )
