@@ -453,6 +453,11 @@ body {
       text-decoration: none;
       font-size: 12pt; }
 
+.noscroll {
+  color: hotpink;
+  overflow-y: hidden;
+  filter: blur(100%); }
+
 .detailed-media {
   position: fixed;
   z-index: 1000;
@@ -462,24 +467,47 @@ body {
   margin-right: auto;
   left: 0;
   right: 0;
-  border-radius: 5px;
-  background-color: #141414; }
+  overflow-y: scroll;
+  inset: 0;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  border-radius: 7px;
+  background-color: #141414;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */ }
+  .detailed-media::-webkit-scrollbar {
+    display: none; }
   .detailed-media header {
     position: relative;
     overflow: hidden;
     margin: 0 auto; }
-  .detailed-media img {
+  .detailed-media .featured-poster {
     border-radius: 5px 5px 0 0;
-    width: 100%; }
+    width: 100%;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black) 70% to(rgba(0, 0, 0, 0)));
+    mask-image: linear-gradient(to bottom, black 70%, rgba(0, 0, 0, 0)); }
+  .detailed-media .title-logo {
+    max-width: 50%;
+    max-height: 400px;
+    margin-bottom: 15px; }
+  .detailed-media__close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px; }
   .detailed-media__overlay {
     width: calc(100% - 80px);
     position: absolute;
     bottom: 40px;
-    left: 40px; }
+    left: 50px; }
   .detailed-media .row {
     display: flex;
     align-items: center;
-    gap: 6px; }
+    gap: 8px;
+    margin-bottom: 2px; }
   .detailed-media button {
     font-size: 12pt; }
   .detailed-media .play-btn {
@@ -522,8 +550,10 @@ body {
   .detailed-media section {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
-    padding: 0px 40px; }
+    gap: 75px;
+    padding: 0px 50px; }
+  .detailed-media p {
+    font-size: 1.15em; }
   .detailed-media h4 {
     margin: 0;
     font-size: 12pt;
@@ -538,13 +568,16 @@ body {
     transform: scaleX(-1);
     font-size: 16pt; }
   .detailed-media .rating {
-    display: inline;
+    display: inline-flex;
+    white-space: nowrap;
     margin-top: 3px;
-    padding: 0px 3px 2px 2px;
+    margin: 3px 10px 0 0;
+    padding: 4px 5px;
     border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 2px; }
-  .detailed-media .buffer {
-    margin: 0 10px; }
+    border-radius: 2px;
+    font-size: 10pt; }
+  .detailed-media .left-buffer {
+    margin-left: 10px; }
   .detailed-media .most-liked-icon {
     margin: 15px 0;
     padding: 5px;
@@ -557,7 +590,7 @@ body {
     gap: 15px;
     max-width: 30%; }
   .detailed-media h1 {
-    margin: 40px 40px 15px 40px;
+    margin: 50px 50px 15px 50px;
     font-size: 1.35em; }
   .detailed-media .detail-list strong {
     color: grey; }
@@ -568,4 +601,4 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin: 0px 40px 40px 40px; }
+    margin: 0px 50px 50px 50px; }

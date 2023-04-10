@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 
 import Nav from "./Nav";
@@ -12,17 +12,22 @@ const Home = () => {
   const { mediaByCategory, detailedMediaToggle } = useOutletContext();
   console.log("detailed media toggle", detailedMediaToggle);
 
+  useEffect(() => {
+  }, [detailedMediaToggle])
+
 
   return (
-    <div className="home">
+    <div>
 
-      <Nav />
-      <Featured />
-      {
-        mediaByCategory.length ? mediaByCategory.map((category, index) => {
-          return <Slider category={category.name} categorysMedia={category.media} key={index} />
-        }) : <div>Fetching...</div>
-      }
+      <div className={ detailedMediaToggle ? "home noscroll" : "home" }>
+        <Nav />
+        <Featured />
+        {
+          mediaByCategory.length ? mediaByCategory.map((category, index) => {
+            return <Slider category={category.name} categorysMedia={category.media} key={index} />
+          }) : <div>Fetching...</div>
+        }
+      </div>
       {
         detailedMediaToggle ? <DetailedMedia /> : null
       }

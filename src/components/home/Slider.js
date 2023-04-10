@@ -17,15 +17,22 @@ const Slider = ({ category, categorysMedia }) => {
   }, [])
 
   function getSliderMedia() {
-    let mediaWithFeaturedPosters = categorysMedia.map(indivMedia => determinePoster(indivMedia));
-    let shuffledMedia = shuffle(mediaWithFeaturedPosters);
+    let mediaWithOrganizedPosters = categorysMedia.map(indivMedia => organizePosters(indivMedia));
+    let shuffledMedia = shuffle(mediaWithOrganizedPosters);
     setSliderMedia(shuffledMedia);
   }
 
-  function determinePoster(indivMedia) {
-    const widePosters = indivMedia.posters.filter(poster => poster.wide);
-    const randomPoster = widePosters[~~(Math.random() * widePosters.length)];
-    indivMedia.featuredPoster = randomPoster;
+  function organizePosters(indivMedia) {
+    const titleCards = indivMedia.posters.filter(poster => poster.titleCard);
+    const wideTitleCards = titleCards.filter(poster => poster.wide);
+    const tallTitleCards = titleCards.filter(poster => !poster.wide); // todo: mobile view w tall posters
+    indivMedia.chosenTitleCard = wideTitleCards[~~(Math.random() * wideTitleCards.length)];
+
+    indivMedia.featuredPosters = indivMedia.posters.filter(poster => poster.featured);
+    indivMedia.titleLogos = indivMedia.posters.filter(poster => poster.titleLogo);
+
+    // console.log("indiv media", indivMedia)
+
     return indivMedia;
   }
 
@@ -64,7 +71,7 @@ const Slider = ({ category, categorysMedia }) => {
         <div ref={slider} className="slider__content">
             {
               sliderMedia.length ? sliderMedia.map((indivMedia, index) => {
-                return <img onClick={(event) => handleCardClick(event)} className="slider__card" key={index} src={indivMedia.featuredPoster.image} alt={indivMedia.title + " Poster Title Card"}></img>
+                return <img onClick={(event) => handleCardClick(event)} className="slider__card" key={index} src={indivMedia.chosenTitleCard ? indivMedia.chosenTitleCard.image : ""} alt={indivMedia.title + " Poster Title Card"}></img>
               }) : null
             }
           </div>
