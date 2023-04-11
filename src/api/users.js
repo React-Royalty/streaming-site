@@ -3,7 +3,7 @@
 export async function registerFetch(username, password) {
   try {
     const response = await fetch(
-      'http://localhost:3001/api/users/register',
+      'http://localhost:8080/api/users/register',
       {
         method: "POST",
         headers: {
@@ -16,7 +16,7 @@ export async function registerFetch(username, password) {
       }
     )
     const data = await response.json();
-    // console.log("register data:", data);
+    console.log("register data:", data);
     return data;
   } catch(error) {
     console.log(error);

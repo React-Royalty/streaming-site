@@ -1,8 +1,8 @@
-// TODO: blur and stop home page from scrolling behind
+
 .noscroll { 
-  color: hotpink;
+  position: fixed;  // TODO: stop from scrolling and stay in place
   overflow-y: hidden;
-  filter: blur(100%);
+  filter: blur(5px);
 }
 
 .detailed-media {

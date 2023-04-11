@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { IoMdSettings } from 'react-icons/io';
 import { BiSearch } from 'react-icons/bi';
@@ -19,9 +20,9 @@ function Nav() {
           </button>
         </form>
         <div className="home-nav__user-nav">
-          <div className="home-nav__user">
-            <img className="home-nav__user--photo" alt="account icon" src="https://i.imgur.com/7PG0Tup.png"/> 
-          </div>
+          <Link to="/profile" className="home-nav__user">
+            <img className="home-nav__user--photo" alt="account icon" src="https://i.imgur.com/ijG3GnA.png"/> 
+          </Link>
           <div className="home-nav__user-icon-box">
             <IoMdSettings className="home-nav__user-settings" alt="settings icon"/> 
           </div>
@@ -30,4 +31,4 @@ function Nav() {
   )
 }
 
-export default Nav
+export default Nav;

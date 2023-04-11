@@ -3,11 +3,6 @@ import DetailList from "./DetailList";
 
 function AboutMedia({ media, organizedCrew, organizedCategories }) {
 
-  console.log("MEDIA", media)
-  console.log("organized crew", organizedCrew)
-
-  const tempVibes = [{name: "Understated"}, {name: "Intimate"}, {name: "Bittersweet"}];
-
 
   return (
     <div>
@@ -19,7 +14,6 @@ function AboutMedia({ media, organizedCrew, organizedCategories }) {
         { organizedCrew.writers && organizedCrew.writers.length ? <DetailList title="Writer" contents={organizedCrew.writers} /> : null }
         { organizedCategories.genres && organizedCategories.genres.length ? <DetailList title="Genre" contents={organizedCategories.genres} /> : null }
         { organizedCategories.vibes && organizedCategories.vibes.length ? <DetailList title="This movie is" contents={organizedCategories.vibes} /> : null }
-        <DetailList title="This movie is" contents={tempVibes} />
         <div className="detail-list"><strong>Maturity Rating: </strong>
           <div className="list-item">
             <div className="rating left-buffer">{media.maturityRating}</div>

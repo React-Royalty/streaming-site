@@ -95,7 +95,7 @@ const Login = () => {
             </div>
           </div>
 
-          <div className='login__sign-up-link'>New to marathon? <Link>Sign up now.</Link></div>
+          <div className='login__sign-up-link'>New to marathon? <Link to="/register">Sign up now.</Link></div>
 
         </form>
       </div>

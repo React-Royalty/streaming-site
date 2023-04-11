@@ -17,13 +17,13 @@ const Home = () => {
   return (
     <div>
 
-      <div className={ detailedMediaToggle ? "home noscroll" : "home" }>
+      <div className={ detailedMediaToggle ? "noscroll" : "home" }>
         <Nav />
         <Featured />
         {
           mediaByCategory.length ? mediaByCategory.map((category, index) => {
             return <Slider category={category.name} categorysMedia={category.media} key={index} />
-          }) : <div>Fetching...</div>
+          }) : <div>cool loading animation</div>  // TODO: cool loading animation
         }
       </div>
       {

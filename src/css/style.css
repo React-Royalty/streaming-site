@@ -264,6 +264,9 @@ body {
       .labeled-input input:focus + .labeled-input__show-pw-btn {
         color: red;
         transition: all .15s ease; }
+      .labeled-input input:focus + .labeled-input__focus-bg__error {
+        color: lime;
+        box-shadow: inset 0 -2px 0 red; }
     .labeled-input input:active {
       background: rgba(255, 255, 255, 0.05);
       outline: none;
@@ -279,7 +282,7 @@ body {
 
 .featured {
   position: relative;
-  margin-bottom: -10%; }
+  margin-bottom: -15%; }
   .featured__poster {
     width: 100%;
     position: relative;
@@ -319,6 +322,7 @@ body {
   left: 0;
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   z-index: 1000;
   height: 8vh;
@@ -400,11 +404,12 @@ body {
       color: white; }
     .home-nav__user:hover .home-nav__user--photo {
       transform: scale(1.05);
-      border: 2px solid white; }
+      border: 2px solid black; }
     .home-nav__user--photo {
+      padding: 5%;
       height: 3.75rem;
       border-radius: 50%;
-      border: 2px solid gray;
+      border: 2px solid white;
       transition: all .3s; }
       @media only screen and (max-width: 31.25em) {
         .home-nav__user--photo {
@@ -420,7 +425,6 @@ body {
       .home-nav__user-icon-box {
         margin-right: 0; } }
   .home-nav__user-settings {
-    color: gray;
     height: 3.75rem;
     width: 3.75rem;
     transition: all .3s;
@@ -482,11 +486,13 @@ body {
       color: white;
       text-decoration: none;
       font-size: 12pt; }
+  .login .error-msg {
+    color: #A30707; }
 
 .noscroll {
-  color: hotpink;
+  position: fixed;
   overflow-y: hidden;
-  filter: blur(100%); }
+  filter: blur(5px); }
 
 .detailed-media {
   position: fixed;
@@ -632,3 +638,10 @@ body {
     flex-direction: column;
     gap: 5px;
     margin: 0px 50px 50px 50px; }
+
+.profile {
+  background-color: lavender;
+  height: 800px; }
+  .profile h1 {
+    margin-top: 400px;
+    color: hotpink; }

@@ -53,7 +53,7 @@ function App() {
     const meFetchData = await meFetch();
 
     if ( meFetchData.success ) {
-      // console.log("welcome " + meFetchData.user.username);
+      console.log("welcome, " + meFetchData.user.username);
       setLoggedIn(true);
       setUserData(meFetchData.user);
     } else {

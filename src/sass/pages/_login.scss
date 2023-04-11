@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   background-color: rgba($logo-blue, 0.25);
+  // background-color: 	#141414;
   margin: 50px;
   padding: 50px;
   border-radius: 5px;
@@ -45,6 +46,11 @@
       text-decoration: none;
       font-size: 12pt;
     }
+  }
+
+  .error-msg {
+    // font-size: 10pt;
+    color: #A30707;
   }
 
 }
