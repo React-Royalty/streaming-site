@@ -262,6 +262,7 @@ body {
         transform: scaleX(1);
         transition: all .1s ease; }
       .labeled-input input:focus + .labeled-input__show-pw-btn {
+        display: contents;
         color: red;
         transition: all .15s ease; }
       .labeled-input input:focus + .labeled-input__focus-bg__error {
@@ -639,9 +640,6 @@ body {
     gap: 5px;
     margin: 0px 50px 50px 50px; }
 
-.profile {
-  background-color: lavender;
-  height: 800px; }
-  .profile h1 {
-    margin-top: 400px;
-    color: hotpink; }
+.profile h1 {
+  margin-top: 400px;
+  color: hotpink; }

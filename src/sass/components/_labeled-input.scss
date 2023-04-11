@@ -87,8 +87,8 @@
         transition: all .1s ease;
       }
       + .labeled-input__show-pw-btn {
-        // display: contents; // TODO: MAKE WORK!
-        color: red;
+        display: contents; // TODO: MAKE WORK!
+        color: red; // TODO: Is this selector working?-Drew
         transition: all .15s ease;
       }
       + .labeled-input__focus-bg__error { // TODO: also make work...
