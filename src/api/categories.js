@@ -13,7 +13,7 @@ export async function fetchCategories() {
     )
 
     const data = await response.json();
-    console.log("categories data: ", data);
+    // console.log("categories data: ", data);
     return data;
   } catch (error) {
     console.log(error);

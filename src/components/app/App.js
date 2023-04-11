@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 
 import { fetchCategories } from '../../api/categories';
-import { fetchMedia } from '../../api/media';
+import { fetchMedia, fetchMediaByTitle } from '../../api/media';
 import { meFetch } from '../../api/users';
 
 import "../../css/style.css";
@@ -12,6 +12,7 @@ function App() {
 
   const [ loggedIn, setLoggedIn ] = useState(false);
   const [ userData, setUserData ] = useState({});
+  const [ featuredMedia, setFeaturedMedia ] = useState({});
   const [ media, setMedia ] = useState([]);
   const [ mediaByCategory, setMediaByCategory ] = useState([]);
   const [ detailedMedia, setDetailedMedia ] = useState({});
@@ -28,15 +29,21 @@ function App() {
   async function getMedia() {
     const categoriesFetchData = await fetchCategories();
     const mediaFetchData = await fetchMedia();
+    const featuredMediaFetchData = await fetchMediaByTitle("Spider-Man: Into the Spider-Verse");
 
-    if ( categoriesFetchData.success && mediaFetchData.success ) {
+    if ( categoriesFetchData.success && mediaFetchData.success && featuredMediaFetchData.success ) {
       setMedia(mediaFetchData.allMedia);
-      console.log("media!", media);
+      // console.log("media!", media);
       setMediaByCategory(categoriesFetchData.categories);
-      console.log("categories!", mediaByCategory);
+      // console.log("categories!", mediaByCategory);
+      
+      setFeaturedMedia(featuredMediaFetchData.media);
+      console.log("featured!", featuredMedia);
+
     } else {
       console.log( categoriesFetchData.message );
       console.log( mediaFetchData.message );
+      console.log( featuredMedia.message );
 
     }
   }
@@ -58,7 +65,7 @@ function App() {
   return (
     <div>
 
-      <Outlet context={{ loggedIn, setLoggedIn, userData, setUserData, media, setMedia, mediaByCategory, setMediaByCategory, detailedMedia, setDetailedMedia, detailedMediaToggle, setDetailedMediaToggle }} />
+      <Outlet context={{ loggedIn, setLoggedIn, userData, setUserData, featuredMedia, setFeaturedMedia, media, setMedia, mediaByCategory, setMediaByCategory, detailedMedia, setDetailedMedia, detailedMediaToggle, setDetailedMediaToggle }} />
 
     </div>
   )

@@ -72,6 +72,37 @@ body {
     .btn--featured:hover {
       background-color: black; }
 
+.icon-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px 25px 2px 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: white; }
+  .icon-btn__secondary {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: rgba(20, 20, 20, 0.5);
+    color: white; }
+    .icon-btn__secondary:hover {
+      background-color: rgba(20, 20, 20, 0.75); }
+    .icon-btn__secondary .info-icon {
+      font-size: 1.5em;
+      margin-right: 5px; }
+  .icon-btn:hover {
+    background-color: rgba(255, 255, 255, 0.75); }
+  .icon-btn .play-icon {
+    font-size: 2em; }
+
 .slider {
   -webkit-touch-callout: none;
   /* iOS Safari */
@@ -248,41 +279,39 @@ body {
 
 .featured {
   position: relative;
-  overflow: hidden;
-  margin-top: 5vh; }
+  margin-bottom: -10%; }
   .featured__poster {
     width: 100%;
+    position: relative;
+    z-index: -1;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black) 70% to(rgba(0, 0, 0, 0)));
+    mask-image: linear-gradient(to bottom, black 70%, rgba(0, 0, 0, 0)); }
+  .featured__overlay {
     position: absolute;
-    bottom: 0;
-    z-index: -1; }
-  .featured__textbox {
-    position: absolute;
-    top: 40%;
+    bottom: 20%;
+    left: 5%;
     width: 30%;
-    height: 50%;
-    margin-left: 2rem; }
+    height: 50%; }
     @media only screen and (max-width: 68.75em) {
-      .featured__textbox {
+      .featured__overlay {
         width: 40%; } }
     @media only screen and (max-width: 56.25em) {
-      .featured__textbox {
+      .featured__overlay {
         width: 70%; } }
     @media only screen and (max-width: 37.5em) {
-      .featured__textbox {
+      .featured__overlay {
         width: 90%; } }
   .featured__title {
-    font-family: "Anton", sans-serif; }
-    .featured__title--main {
-      display: block;
-      font-size: 7rem; }
-      @media only screen and (max-width: 68.75em) {
-        .featured__title--main {
-          font-size: 5rem; } }
-    .featured__title--sub {
-      display: block;
-      font-size: 4rem; }
+    width: 100%; }
   .featured__description {
-    padding: 1rem 0; }
+    padding: 1rem 0;
+    margin: 5px 0;
+    font-size: 1.25em; }
+  .featured button {
+    font-size: 1.25em; }
+  .featured__btn-container {
+    display: flex;
+    gap: 20px; }
 
 .home-nav {
   position: fixed;
@@ -408,8 +437,9 @@ body {
 
 .home {
   font-size: 1.6rem;
-  display: grid;
-  grid-template-rows: 60rem repeat(6, 25rem); }
+  display: flex;
+  flex-direction: column;
+  gap: 3em; }
   .home__featured {
     background-color: grey; }
   .home__slider {

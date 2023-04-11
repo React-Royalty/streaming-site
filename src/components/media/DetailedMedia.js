@@ -11,9 +11,7 @@ import AboutMedia from "./AboutMedia";
 
 function DetailedMedia() {
 
-  console.log("inside detailed media");
   const { detailedMedia, setDetailedMedia, setDetailedMediaToggle } = useOutletContext();
-  console.log(detailedMedia);
 
   const [ organizedCrewMembers, setOrganizedCrewMembers ] = useState({});
   const [ organizedCategories, setOrganizedCategories ] = useState({});
@@ -40,7 +38,6 @@ function DetailedMedia() {
     tempOrganizedCategories.vibes = detailedMedia.categories.filter(category => category.vibe);
 
     setOrganizedCategories(tempOrganizedCategories);
-    console.log("organizedCategories", organizedCategories);
   }
 
   function determinePosters() {

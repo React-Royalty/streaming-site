@@ -10,11 +10,9 @@ import DetailedMedia from "../media/DetailedMedia";
 const Home = () => {
 
   const { mediaByCategory, detailedMediaToggle } = useOutletContext();
-  console.log("detailed media toggle", detailedMediaToggle);
 
   useEffect(() => {
   }, [detailedMediaToggle])
-
 
   return (
     <div>

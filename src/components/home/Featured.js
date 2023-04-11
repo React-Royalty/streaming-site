@@ -1,29 +1,52 @@
-import React from "react";
+import React, { useEffect } from 'react';
+import { useOutletContext } from 'react-router-dom';
 
 import { BsFillPlayFill } from 'react-icons/bs';
 import { BiInfoCircle } from 'react-icons/bi';
 
 
 function Featured() {
+
+  const { media, setDetailedMedia, setDetailedMediaToggle, featuredMedia } = useOutletContext();
+  // console.log("featuredMedia", featuredMedia);
+
+
+  // useEffect(() => {
+  //   determinePosters(); // TODO: FIX! moved this bs and get rid of hard coded image urls
+  // }, [])
+
+
+  async function determinePosters() {
+    console.log("featuredMedia.posters", featuredMedia.posters);
+    const featuredPosters = featuredMedia.posters.filter(poster => poster.featured);
+    featuredMedia.featuredPoster = featuredPosters[~~(Math.random() * featuredPosters.length)];
+    
+    const titleLogos = featuredMedia.posters.filter(poster => poster.titleLogo);
+    featuredMedia.titleLogo = titleLogos[~~(Math.random() * titleLogos.length)];
+    console.log("FEATURED MEDIA DATA", featuredMedia)
+  }
+
+
+  function handleMoreInfoClick() {
+    const selectedTitle = "Spider-Man: Into the Spider-Verse"
+    const foundMedia = media.filter(indivMedia => indivMedia.title === selectedTitle);
+    setDetailedMedia(foundMedia[0]);
+    setDetailedMediaToggle(true);
+  }
+
+
   return (
-      <section className="featured">
-        <img className="featured__poster" src="https://i.imgur.com/X8X7JS6.png" alt="featured movie poster" />
-        <div className="featured__textbox">
-          <div className="featured__title">
-            <span className="featured__title--main">Spider-Man</span>
-            <span className="featured__title--sub">Into the Spiderverse</span>
-          </div>
-          <p className="featured__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus
-          </p>
-          <a href="#" className="btn btn--featured">
-            <span className="btn__icon">< BsFillPlayFill /></span>
-            <span className="btn__text"> Play</span></a>
-            <a href="#" className="btn btn--featured">
-            <span className="btn__icon">< BiInfoCircle /></span>
-            <span className="btn__text"> Info</span></a>
+    <section className="featured">
+      <img className="featured__poster" src="https://i.imgur.com/10gQhzy.png" alt="featured movie poster" />
+      <div className="featured__overlay">
+        <img className="featured__title" src="https://i.imgur.com/TlUhZiG.png"></img>
+        <p className="featured__description">{ featuredMedia.description ? featuredMedia.description : "" }</p>
+        <div className="featured__btn-container">
+          <button className="icon-btn"><BsFillPlayFill className="play-icon"/>Play</button>
+          <button className="icon-btn__secondary" onClick={handleMoreInfoClick}><BiInfoCircle className="info-icon"/>More Info</button>
         </div>
-      </section>
+      </div>
+    </section>
   )
 }
 
