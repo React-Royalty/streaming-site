@@ -4,6 +4,7 @@
   left: 0;
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   z-index: 1000;
 
@@ -14,7 +15,6 @@
 
   // LOGO 
   &__logo {
- 
 
     &--large {
       height: 4rem;
@@ -132,13 +132,15 @@
 
     &:hover &--photo {
       transform: scale(1.05);
-      border: 2px solid white;
+      border: 2px solid black;
     }
 
     &--photo {
+      padding: 5%;
       height: 3.75rem;
       border-radius: 50%;
-      border: 2px solid lighten(#000, 50);
+      border: 2px solid white;
+      // border: 2px solid lighten(#000, 50);
       transition: all .3s;
 
       @media only screen and (max-width: $bp-smallest) {
@@ -163,7 +165,7 @@
   } 
 
   &__user-settings {
-    color: lighten(#000, 50);
+    // color: lighten(#000, 50);
     height: 3.75rem;
     width: 3.75rem;
     transition: all .3s;

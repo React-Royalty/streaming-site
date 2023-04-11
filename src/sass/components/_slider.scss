@@ -36,6 +36,7 @@
 
   &__content {
     display: flex;
+    gap: 7px;
     overflow: scroll;
     box-sizing: border-box;
     width: 100vw;
@@ -86,8 +87,9 @@
   }
 
   &__card{
-    height: 20rem;
+    height: 16rem;
     cursor: pointer;
+    border-radius: 3px;
     transitioN: all .4s;
     position: relative;
     opacity: .75;

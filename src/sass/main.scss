@@ -9,6 +9,7 @@
 
 @import "components/buttons";
 @import "components/slider";
+@import "components/labeled-input";
 
 @import "layout/featured";
 @import "layout/footer";
@@ -16,3 +17,6 @@
 @import "layout/header";
 
 @import "pages/home";
+@import "pages/login";
+@import "pages/detailed-media";
+@import "pages/profile";

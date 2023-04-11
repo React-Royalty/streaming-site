@@ -1,21 +1,23 @@
 .featured {
   position: relative;
-  overflow: hidden;
-  margin-top: 5vh;
+  // overflow: hidden;
+  margin-bottom: -15%;  // todo: maybe find a better way than negative margins
+
 
   &__poster {
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    position: relative;
     z-index: -1;
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)) 70% to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0));
   }
 
-  &__textbox {
+  &__overlay {
     position: absolute;
-    top: 40%;
+    bottom: 20%;
+    left: 5%;
     width: 30%;
     height: 50%;
-    margin-left: 2rem;
 
     @media only screen and (max-width: $bp-large) {
       width: 40%;
@@ -31,24 +33,21 @@
   }
 
   &__title {
-    font-family: $font-header;
-
-    &--main {
-      display: block;
-      font-size: 7rem;
-
-      @media only screen and (max-width: $bp-large) {
-        font-size: 5rem;
-      }
-    }
-
-    &--sub {
-      display: block;
-      font-size: 4rem;
-    }
+    width: 100%;
   }
 
   &__description {
     padding: 1rem 0;
+    margin: 5px 0;
+    font-size: 1.25em;
+  }
+
+  button {
+    font-size: 1.25em;
+  }
+
+  &__btn-container {
+    display: flex;
+    gap: 20px;
   }
 }

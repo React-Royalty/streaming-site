@@ -3,7 +3,7 @@
 export async function registerFetch(username, password) {
   try {
     const response = await fetch(
-      'http://localhost:3001/api/users/register',
+      'http://localhost:8080/api/users/register',
       {
         method: "POST",
         headers: {
@@ -16,7 +16,7 @@ export async function registerFetch(username, password) {
       }
     )
     const data = await response.json();
-    // console.log("register data:", data);
+    console.log("register data:", data);
     return data;
   } catch(error) {
     console.log(error);
@@ -27,7 +27,7 @@ export async function registerFetch(username, password) {
 export async function loginFetch(username, password) {
   try {
     const response = await fetch(
-      'http://localhost:3001/api/users/login',
+      'http://localhost:8080/api/users/login',
       {
         method: "POST",
         headers: {
@@ -51,7 +51,7 @@ export async function loginFetch(username, password) {
 export async function meFetch() {    
   try {
     const response = await fetch(
-      'http://localhost:3001/api/users/me',
+      'http://localhost:8080/api/users/me',
       {
         headers: {
           "Content-Type": "application/json",
