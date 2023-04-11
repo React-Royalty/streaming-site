@@ -24,7 +24,7 @@ function App() {
 
     if ( mediaFetchData.success ) {
       setMedia(mediaFetchData.allMedia);
-      // console.log("media!", media);
+      console.log("media!", media);
     } else {
       console.log( mediaFetchData.message );
     }
