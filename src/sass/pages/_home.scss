@@ -16,8 +16,11 @@
   //   margin: 5rem;
   // }
 
-  display: grid;
-  grid-template-rows: 60rem repeat(6, 25rem);
+  // display: grid;
+  // grid-template-rows: 60rem repeat(6, 25rem);
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
 
   &__featured {
     background-color: grey;

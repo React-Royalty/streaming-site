@@ -1,0 +1,121 @@
+.hidden {
+  visibility: hidden;
+}
+
+.labeled-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 280px;
+  border-radius: 3px;
+  box-shadow: inset 0 -1.5px 0 rgba($logo-blue, 0.75);
+  background-color: rgba(gray, 0.5);
+  overflow: hidden;
+
+  &__label {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: rgba(white, 0.5);
+    font-size: 16px; 
+    font-weight: 500;
+    transform-origin: 0 0;
+    transform: translate3d(0, 0, 0);
+    transition: all .2s ease;
+    pointer-events: none;
+  }
+
+  &__focus-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(black, 0.05);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  &__show-pw-btn {
+    cursor: pointer;
+    // Prevent select:
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    // display: none; // TODO: MAKE WORK!
+    padding: 14px 10px 14px 0;
+    border: none;
+    box-shadow: inset 0 -2px 0 $logo-lightblue;
+    background-color: rgba(white, 0.05);
+    color: rgba(white, 0.5);
+    font-size: 10pt;
+  }
+
+  input {
+    -webkit-appearance: none;
+    appearance: none;    width: 100%;
+    height: 44px;
+    padding: 10px 10px 0 10px;
+    border: 0;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all .15s ease;
+
+    &:hover {
+      background: rgba(white,.04);
+      box-shadow: inset 0 -1.5px 0 rgba(white, 0.5);
+    }
+    &:not(:placeholder-shown) 
+      + .labeled-input__label {
+        color: rgba(white, 0.5);
+        transform: translate3d(0, -12px, 0) scale(.75);
+    }
+    &:focus {
+      background: rgba(white, 0.05);
+      outline: none;
+      box-shadow: inset 0 -2px 0 $logo-lightblue;
+      + .labeled-input__label {
+        color: white;
+        transform: translate3d(0, -12px, 0) scale(.75);
+      }
+      + .labeled-input__focus-bg {
+        transform: scaleX(1);
+        transition: all .1s ease;
+      }
+      + .labeled-input__show-pw-btn {
+        // display: contents; // TODO: MAKE WORK!
+        color: red;
+        transition: all .15s ease;
+      }
+      + .labeled-input__focus-bg__error { // TODO: also make work...
+        color: lime;
+        box-shadow: inset 0 -2px 0 red;
+      }
+      
+    }
+    &:active {
+      background: rgba(white, 0.05);
+      outline: none;
+      box-shadow: inset 0 -2px 0 $logo-lightblue;
+      + .labeled-input__label {
+        color: white;
+        transform: translate3d(0,-12px,0) scale(.75);
+      }
+      + .labeled-input__focus-bg {
+        transform: scaleX(1);
+        transition: all .1s ease;
+      }
+      + .labeled-input__show-pw-btn {
+        display: contents; // TODO: MAKE WORK!
+      }
+    }
+  }
+
+
+
+
+}

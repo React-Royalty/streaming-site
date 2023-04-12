@@ -49,3 +49,47 @@
     }
   }
 }
+
+.icon-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px 25px 2px 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: white;
+
+  &__secondary {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: rgba(#141414, 0.5);
+    color: white;
+
+    &:hover {
+      background-color: rgba(#141414, 0.75);
+    }
+
+    .info-icon {
+      font-size: 1.5em;
+      margin-right: 5px;
+    }
+  }
+
+  &:hover {
+    background-color: rgba(white, 0.75);
+  }
+
+  .play-icon {
+    font-size: 2em;
+  }
+
+
+}
