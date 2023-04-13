@@ -70,7 +70,7 @@ function DetailedMedia() {
 
 
   return (
-    <div className='fuckity' id='detailed-media-parent'onClick={clickOutDetailedMedia} style={{position: "fixed", display: "flex", width: "100vw", alignItems: "center", justifyContent: "center", overflowY:"scroll"}}>
+    <div className='fuckity' id='detailed-media-parent'onClick={clickOutDetailedMedia} style={{position: "fixed", display: "flex", width: "100vw", height: "100vh", alignItems: "flex-start", justifyContent: "center", overflowY:"scroll"}}>
       <div className="detailed-media" >
       {/* onFocus={()=>console.log('focused')} onBlur={(event) => unselectDetailedMedia(event)} */}
 
