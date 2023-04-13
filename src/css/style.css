@@ -266,6 +266,7 @@ body {
         transition: all .1s ease; }
       .labeled-input input:focus ~ .labeled-input__show-pw-btn {
         display: inline-block;
+
         transition: all .15s ease; }
       .labeled-input input:focus + .labeled-input__focus-bg__error {
         color: lime;
