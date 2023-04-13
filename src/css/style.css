@@ -498,12 +498,9 @@ body {
   filter: blur(5px); }
 
 .detailed-media {
-  position: fixed;
   z-index: 1000;
   width: 60%;
   margin-top: 25px;
-  margin-left: auto;
-  margin-right: auto;
   left: 0;
   right: 0;
   overflow-y: scroll;
