@@ -226,12 +226,15 @@ body {
     /* IE 10 and IE 11 */
     user-select: none;
     /* Standard syntax */
+    display: none;
     padding: 14px 10px 14px 0;
     border: none;
     box-shadow: inset 0 -2px 0 #BCC8F1;
     background-color: rgba(255, 255, 255, 0.05);
     color: rgba(255, 255, 255, 0.5);
     font-size: 10pt; }
+    .labeled-input__show-pw-btn:active {
+      display: inline-block; }
   .labeled-input input {
     -webkit-appearance: none;
     appearance: none;
@@ -261,9 +264,9 @@ body {
       .labeled-input input:focus + .labeled-input__focus-bg {
         transform: scaleX(1);
         transition: all .1s ease; }
-      .labeled-input input:focus + .labeled-input__show-pw-btn {
-        display: contents;
-        color: red;
+      .labeled-input input:focus ~ .labeled-input__show-pw-btn {
+        display: inline-block;
+
         transition: all .15s ease; }
       .labeled-input input:focus + .labeled-input__focus-bg__error {
         color: lime;
@@ -496,12 +499,9 @@ body {
   filter: blur(5px); }
 
 .detailed-media {
-  position: fixed;
   z-index: 1000;
   width: 60%;
   margin-top: 25px;
-  margin-left: auto;
-  margin-right: auto;
   left: 0;
   right: 0;
   overflow-y: scroll;

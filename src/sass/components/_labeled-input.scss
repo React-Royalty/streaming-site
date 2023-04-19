@@ -43,13 +43,18 @@
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
-    // display: none; // TODO: MAKE WORK!
+    display: none;
+    // TODO: MAKE WORK!^^
     padding: 14px 10px 14px 0;
     border: none;
     box-shadow: inset 0 -2px 0 $logo-lightblue;
     background-color: rgba(white, 0.05);
     color: rgba(white, 0.5);
     font-size: 10pt;
+
+    &:active {
+      display: inline-block;
+    }
   }
 
   input {
@@ -86,9 +91,8 @@
         transform: scaleX(1);
         transition: all .1s ease;
       }
-      + .labeled-input__show-pw-btn {
-        display: contents; // TODO: MAKE WORK!
-        color: red; // TODO: Is this selector working?-Drew
+      ~ .labeled-input__show-pw-btn {
+        display: inline-block;
         transition: all .15s ease;
       }
       + .labeled-input__focus-bg__error { // TODO: also make work...
