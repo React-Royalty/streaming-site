@@ -33,9 +33,9 @@ function App() {
 
     if ( categoriesFetchData.success && mediaFetchData.success && featuredMediaFetchData.success ) {
       setMedia(mediaFetchData.allMedia);
-      // console.log("media!", media);
+      // console.log("media!", mediaFetchData.media);
       setMediaByCategory(categoriesFetchData.categories);
-      // console.log("categories!", mediaByCategory);
+      // console.log("categories!", categoriesFetchData.categories);
       
       setFeaturedMedia(featuredMediaFetchData.media);
       console.log("featured!", featuredMedia);

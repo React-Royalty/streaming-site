@@ -17,7 +17,6 @@ function DetailedMedia() {
   const [ organizedCategories, setOrganizedCategories ] = useState({});
 
   useEffect(() => {
-    determinePosters();
     determineCrewRoles();
     determineCategoryTypes();
   }, [])
@@ -40,21 +39,13 @@ function DetailedMedia() {
     setOrganizedCategories(tempOrganizedCategories);
   }
 
-  function determinePosters() {
-    const featuredPosters = detailedMedia.posters.filter(poster => poster.featured);
-    detailedMedia.featuredPoster = featuredPosters[~~(Math.random() * featuredPosters.length)];
-    
-    const titleLogos = detailedMedia.posters.filter(poster => poster.titleLogo);
-    detailedMedia.titleLogo = titleLogos[~~(Math.random() * titleLogos.length)];
-  }
-
 
 
 
   async function unselectDetailedMedia(event) {
-    console.log("clicked off!!!!!!!!!!!!!!!!!!!!!") // TODO: make work
+    // console.log("clicked off!!!!!!!!!!!!!!!!!!!!!") // TODO: make work
                                                     // Made Work. Removed onBlur from 'detailed-media' div. added parent container 'fuckity'. which uses function clickOutDetailedMedia
-    console.log("event", event)
+    // console.log("event", event)
     setDetailedMediaToggle(false)
     setDetailedMedia({});
   }

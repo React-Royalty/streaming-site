@@ -4,7 +4,7 @@
 export async function fetchCategories() {
   try {
     const response = await fetch(
-      'http://localhost:8080/api/categories',
+      'https://streaming-site.onrender.com/api/categories',
       {
         headers: {
           "Content-Type": "application/json"

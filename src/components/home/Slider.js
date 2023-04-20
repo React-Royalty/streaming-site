@@ -1,40 +1,12 @@
 import { useState, useEffect, useRef } from "react";
-import { useOutletContext } from 'react-router-dom';
-import { BsFillCaretLeftFill, BsFillCaretRightFill, BsFillPlayFill } from 'react-icons/bs'
+import { useOutletContext } from "react-router-dom";
+import { BsFillCaretLeftFill, BsFillCaretRightFill } from "react-icons/bs";
 
-import DetailedMedia from "../media/DetailedMedia";
 
 const Slider = ({ category, categorysMedia }) => {
   const { media, setDetailedMedia, setDetailedMediaToggle } = useOutletContext();
 
-  const [ sliderMedia, setSliderMedia ] = useState({});
-
-
   const slider = useRef(null)
-
-  useEffect(() => {
-    getSliderMedia();
-  }, [])
-
-  function getSliderMedia() {
-    let mediaWithOrganizedPosters = categorysMedia.map(indivMedia => organizePosters(indivMedia));
-    let shuffledMedia = shuffle(mediaWithOrganizedPosters);
-    setSliderMedia(shuffledMedia);
-  }
-
-  function organizePosters(indivMedia) {
-    const titleCards = indivMedia.posters.filter(poster => poster.titleCard);
-    const wideTitleCards = titleCards.filter(poster => poster.wide);
-    const tallTitleCards = titleCards.filter(poster => !poster.wide); // todo: mobile view w tall posters
-    indivMedia.chosenTitleCard = wideTitleCards[~~(Math.random() * wideTitleCards.length)];
-
-    indivMedia.featuredPosters = indivMedia.posters.filter(poster => poster.featured);
-    indivMedia.titleLogos = indivMedia.posters.filter(poster => poster.titleLogo);
-
-    // console.log("indiv media", indivMedia)
-
-    return indivMedia;
-  }
 
   function shuffle(mediaToShuffle) {
     let currentIndex = mediaToShuffle.length, randomIndex;
@@ -70,8 +42,8 @@ const Slider = ({ category, categorysMedia }) => {
         
         <div ref={slider} className="slider__content">
             {
-              sliderMedia.length ? sliderMedia.map((indivMedia, index) => {
-                return <img onClick={(event) => handleCardClick(event)} className="slider__card" key={index} src={indivMedia.chosenTitleCard ? indivMedia.chosenTitleCard.image : ""} alt={indivMedia.title + " Poster Title Card"}></img>
+              categorysMedia.length ? categorysMedia.map((indivMedia, index) => {
+                return <img onClick={(event) => handleCardClick(event)} className="slider__card" key={index} src={indivMedia.wideTitleCard ? indivMedia.wideTitleCard.image : ""} alt={indivMedia.title + " Poster Title Card"}></img>
               }) : null
             }
           </div>
