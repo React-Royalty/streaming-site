@@ -185,9 +185,6 @@ body {
         .slider__card:hover {
           transform: scale(1); } }
 
-.hidden {
-  visibility: hidden; }
-
 .labeled-input {
   position: relative;
   display: flex;
@@ -266,7 +263,6 @@ body {
         transition: all .1s ease; }
       .labeled-input input:focus ~ .labeled-input__show-pw-btn {
         display: inline-block;
-
         transition: all .15s ease; }
       .labeled-input input:focus + .labeled-input__focus-bg__error {
         color: lime;
@@ -283,6 +279,9 @@ body {
         transition: all .1s ease; }
       .labeled-input input:active + .labeled-input__show-pw-btn {
         display: contents; }
+
+.error {
+  box-shadow: inset 0 -1.5px 0 rgba(163, 7, 7, 0.75); }
 
 .featured {
   position: relative;
@@ -470,6 +469,7 @@ body {
     flex-direction: column;
     gap: 20px; }
   .login button {
+    cursor: pointer;
     width: 100%;
     margin-top: 15px;
     padding: 10px;
@@ -491,7 +491,14 @@ body {
       text-decoration: none;
       font-size: 12pt; }
   .login .error-msg {
+    display: inline-block;
+    height: 40px;
     color: #A30707; }
+    .login .error-msg__icon {
+      line-height: 40px;
+      vertical-align: middle;
+      font-size: 20px;
+      margin-right: 4px; }
 
 .noscroll {
   position: fixed;
