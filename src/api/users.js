@@ -3,7 +3,7 @@
 export async function registerFetch(username, password) {
   try {
     const response = await fetch(
-      'http://localhost:8080/api/users/register',
+      'https://streaming-site.onrender.com/api/users/register',
       {
         method: "POST",
         headers: {
@@ -27,7 +27,7 @@ export async function registerFetch(username, password) {
 export async function loginFetch(username, password) {
   try {
     const response = await fetch(
-      'http://localhost:8080/api/users/login',
+      'https://streaming-site.onrender.com/api/users/login',
       {
         method: "POST",
         headers: {
@@ -51,7 +51,7 @@ export async function loginFetch(username, password) {
 export async function meFetch() {    
   try {
     const response = await fetch(
-      'http://localhost:8080/api/users/me',
+      'https://streaming-site.onrender.com/api/users/me',
       {
         headers: {
           "Content-Type": "application/json",
