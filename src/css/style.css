@@ -8,6 +8,22 @@
   to {
     transform: rotate(360deg); } }
 
+@keyframes fade {
+  0% {
+    background-color: #141414; }
+  50% {
+    background-color: #474747; }
+  100% {
+    background-color: #141414; } }
+
+@keyframes pulse {
+  0% {
+    scale: 100%; }
+  50% {
+    scale: 90%; }
+  100% {
+    scale: 100%; } }
+
 *,
 *::before,
 *::after {
@@ -184,6 +200,11 @@ body {
       @media only screen and (max-width: 31.25em) {
         .slider__card:hover {
           transform: scale(1); } }
+  .slider .empty {
+    background-color: #141414; }
+  .slider .loading-animation {
+    background-image: none !important;
+    animation: fade 3s ease-in-out infinite, pulse ease-in-out 3s infinite; }
 
 .labeled-input {
   position: relative;

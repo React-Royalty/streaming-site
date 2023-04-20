@@ -6,3 +6,15 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes fade {
+  0%   { background-color: #141414; }
+  50%  { background-color: #474747; }
+  100% { background-color: #141414; }
+}
+
+@keyframes pulse {
+  0%   { scale: 100%; }
+  50%  { scale: 90%; }
+  100% { scale: 100%; }
+}

@@ -86,7 +86,7 @@
     opacity: 1;
   }
 
-  &__card{
+  &__card {
     height: 16rem;
     cursor: pointer;
     border-radius: 3px;
@@ -104,4 +104,16 @@
     }
   }
 
+  .empty {
+    background-color: #141414;
+  }
+
+  .loading-animation {    
+    background-image: none !important; 
+    animation: fade 3s ease-in-out infinite, pulse ease-in-out 3s infinite; 
+  }
+}
+
+.margin-left {
+  // margin-left: 80px;  // TODO: move sliders off left border until slid
 }
