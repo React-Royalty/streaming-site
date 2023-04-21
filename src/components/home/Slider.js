@@ -35,7 +35,7 @@ const Slider = ({ category, categorysMedia }) => {
 
   return (
       <section className="slider">
-        <div className="slider__title">{category}</div>
+        <div className="slider__title">{category} {categorysMedia.length}</div>
 
         <div className="slider__box">
         <div onClick={slideLeft} className="slider__button slider__button--left"><BsFillCaretLeftFill /></div>

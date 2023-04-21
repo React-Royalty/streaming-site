@@ -19,6 +19,7 @@
   }
 
   button {
+    cursor: pointer;
     width: 100%;
     margin-top: 15px;
     padding: 10px;
@@ -49,8 +50,16 @@
   }
 
   .error-msg {
-    // font-size: 10pt;
+    display: inline-block;
+    height: 40px;
     color: #A30707;
+
+    &__icon {
+      line-height: 40px;
+      vertical-align: middle;
+      font-size: 20px;
+      margin-right: 4px;
+    }
   }
 
 }

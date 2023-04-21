@@ -5,6 +5,7 @@ import Nav from "./Nav";
 import Featured from "./Featured";
 import Slider from "./Slider";
 import DetailedMedia from "../media/DetailedMedia";
+import LoadingSlider from "./LoadingSlider";
 
 
 const Home = () => {
@@ -23,7 +24,7 @@ const Home = () => {
         {
           mediaByCategory.length ? mediaByCategory.map((category, index) => {
             return <Slider category={category.name} categorysMedia={category.media} key={index} />
-          }) : <div>cool loading animation</div>  // TODO: cool loading animation
+          }) : <LoadingSlider />
         }
       </div>
       {

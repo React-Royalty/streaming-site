@@ -1,6 +1,3 @@
-.hidden {
-  visibility: hidden;
-}
 
 .labeled-input {
   position: relative;
@@ -11,6 +8,8 @@
   box-shadow: inset 0 -1.5px 0 rgba($logo-blue, 0.75);
   background-color: rgba(gray, 0.5);
   overflow: hidden;
+
+
 
   &__label {
     position: absolute;
@@ -44,7 +43,6 @@
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
     display: none;
-    // TODO: MAKE WORK!^^
     padding: 14px 10px 14px 0;
     border: none;
     box-shadow: inset 0 -2px 0 $logo-lightblue;
@@ -114,12 +112,13 @@
         transition: all .1s ease;
       }
       + .labeled-input__show-pw-btn {
-        display: contents; // TODO: MAKE WORK!
+        display: contents;
       }
     }
   }
 
+}
 
-
-
+.error {
+  box-shadow: inset 0 -1.5px 0 rgba($spider-red, 0.75);
 }
