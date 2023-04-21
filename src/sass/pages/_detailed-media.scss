@@ -44,6 +44,12 @@
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0));
   }
 
+  .placeholder {
+    height: 500px;
+    background-color: #141414;
+    // background-color: #141414;
+  }
+
   .title-logo {
     max-width: 50%;
     max-height: 400px;

@@ -4,8 +4,8 @@ import { useOutletContext } from "react-router-dom";
 import Nav from "./Nav";
 import Featured from "./Featured";
 import Slider from "./Slider";
-import DetailedMedia from "../media/DetailedMedia";
 import LoadingSlider from "./LoadingSlider";
+import Popup from "../media/popup/Popup";
 
 
 const Home = () => {
@@ -28,7 +28,7 @@ const Home = () => {
         }
       </div>
       {
-        detailedMediaToggle ? <DetailedMedia /> : null
+        detailedMediaToggle ? <Popup /> : null
       }
 
     </div>
