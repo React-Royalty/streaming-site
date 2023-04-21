@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { useOutletContext } from "react-router-dom";
 import { BsFillCaretLeftFill, BsFillCaretRightFill } from "react-icons/bs";
+import { fetchMediaByTitle } from "../../api/media";
 
 
 const Slider = ({ category, categorysMedia }) => {
-  const { media, setDetailedMedia, setDetailedMediaToggle } = useOutletContext();
+  const { media, setDetailedMediaTitle, setDetailedMediaToggle } = useOutletContext();
 
   const slider = useRef(null)
 
@@ -23,8 +24,8 @@ const Slider = ({ category, categorysMedia }) => {
   function handleCardClick(event) {
     const selectedCardAlt = (event.target.alt);
     const selectedTitle = selectedCardAlt.slice(0, -" Poster Title Card".length);
-    const foundMedia = media.filter(indivMedia => indivMedia.title === selectedTitle);
-    setDetailedMedia(foundMedia[0]);
+    // const foundMedia = media.filter(indivMedia => indivMedia.title === selectedTitle);
+    setDetailedMediaTitle(selectedTitle);
     setDetailedMediaToggle(true);
   }
 

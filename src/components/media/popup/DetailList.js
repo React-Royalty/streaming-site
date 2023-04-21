@@ -4,7 +4,7 @@ function DetailList({ title, contents }) {
 
 
   return (
-    <div className="detail-list"><strong>{title}{ ( contents.length !== 1 && title !== "Cast" && title !== "This movie is" ) ? "s" : ""}: </strong>
+    <div className="detail-list"><strong>{title}{ ( contents.length !== 1 && title !== "Cast" ) ? "s" : ""}: </strong>
     {
       contents && contents.length ? contents.map((item, index) => {
         return <div className="list-item" key={index}>{item.name}{ index !== contents.length - 1 ? ", " : "" }</div>

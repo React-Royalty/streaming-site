@@ -15,7 +15,7 @@ function App() {
   const [ featuredMedia, setFeaturedMedia ] = useState({});
   const [ media, setMedia ] = useState([]);
   const [ mediaByCategory, setMediaByCategory ] = useState([]);
-  const [ detailedMedia, setDetailedMedia ] = useState({});
+  const [ detailedMediaTitle, setDetailedMediaTitle ] = useState({});
   const [ detailedMediaToggle, setDetailedMediaToggle ] = useState(false);
 
 
@@ -65,7 +65,7 @@ function App() {
   return (
     <div>
 
-      <Outlet context={{ loggedIn, setLoggedIn, userData, setUserData, featuredMedia, setFeaturedMedia, media, setMedia, mediaByCategory, setMediaByCategory, detailedMedia, setDetailedMedia, detailedMediaToggle, setDetailedMediaToggle }} />
+      <Outlet context={{ loggedIn, setLoggedIn, userData, setUserData, featuredMedia, setFeaturedMedia, media, setMedia, mediaByCategory, setMediaByCategory, detailedMediaTitle, setDetailedMediaTitle, detailedMediaToggle, setDetailedMediaToggle }} />
 
     </div>
   )
