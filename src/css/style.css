@@ -200,6 +200,27 @@ body {
       @media only screen and (max-width: 31.25em) {
         .slider__card:hover {
           transform: scale(1); } }
+  .slider__number-container {
+    display: flex;
+    align-items: center; }
+    .slider__number-container__number {
+      height: 22rem; }
+  .slider__tall-card {
+    position: absolute;
+    left: -20px;
+    z-index: 1;
+    height: 22rem;
+    cursor: pointer;
+    border-radius: 3px;
+    transitioN: all .4s;
+    position: relative;
+    opacity: .9; }
+    .slider__tall-card:hover {
+      opacity: 1;
+      transform: scale(0.9); }
+      @media only screen and (max-width: 31.25em) {
+        .slider__tall-card:hover {
+          transform: scale(1); } }
   .slider .empty {
     background-color: #141414; }
   .slider .loading-animation {

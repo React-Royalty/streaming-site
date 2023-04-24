@@ -2,10 +2,11 @@ import { useState, useEffect, useRef } from "react";
 import { useOutletContext } from "react-router-dom";
 import { BsFillCaretLeftFill, BsFillCaretRightFill } from "react-icons/bs";
 import { fetchMediaByTitle } from "../../api/media";
+import NumberedCard from "./NumberedCard";
 
 
-const Slider = ({ category, categorysMedia }) => {
-  const { media, setDetailedMediaTitle, setDetailedMediaToggle } = useOutletContext();
+const NumberedSlider = ({ category, categorysMedia }) => {
+  const { setDetailedMediaTitle, setDetailedMediaToggle } = useOutletContext();
 
   const slider = useRef(null)
 
@@ -24,7 +25,6 @@ const Slider = ({ category, categorysMedia }) => {
   function handleCardClick(event) {
     const selectedCardAlt = (event.target.alt);
     const selectedTitle = selectedCardAlt.slice(0, -" Poster Title Card".length);
-    // const foundMedia = media.filter(indivMedia => indivMedia.title === selectedTitle);
     setDetailedMediaTitle(selectedTitle);
     setDetailedMediaToggle(true);
   }
@@ -44,7 +44,7 @@ const Slider = ({ category, categorysMedia }) => {
         <div ref={slider} className="slider__content">
             {
               categorysMedia.length ? categorysMedia.map((indivMedia, index) => {
-                return <img onClick={(event) => handleCardClick(event)} className="slider__card" key={index} src={indivMedia.wideTitleCard ? indivMedia.wideTitleCard.image : ""} alt={indivMedia.title + " Poster Title Card"}></img>
+                return <NumberedCard key={index} handleCardClick={handleCardClick} index={index} indivMedia={indivMedia}/>
               }) : null
             }
           </div>
@@ -52,7 +52,7 @@ const Slider = ({ category, categorysMedia }) => {
           <div onClick={slideRight} className="slider__button slider__button--right"><BsFillCaretRightFill /></div>
         </div>
       </section>
-  )
+  );
 }
 
-export default Slider
+export default NumberedSlider;
