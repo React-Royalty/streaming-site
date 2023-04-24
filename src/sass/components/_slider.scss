@@ -105,6 +105,7 @@
   }
 
   &__number-container {
+    cursor: pointer;
     display: flex;
     align-items: center;
 
@@ -113,8 +114,11 @@
     }
 
     &:hover {
-      opacity: 1;
       transform: scale(.95);
+
+      .slider__tall-card {
+        opacity: 1;
+      }
 
       @media only screen and (max-width: $bp-smallest) {
         transform: scale(1);
@@ -128,12 +132,10 @@
     left: -20px;
     z-index: 1;
     height: 22rem;
-    cursor: pointer;
     border-radius: 3px;
     transitioN: all .4s;
     position: relative;
-    opacity: .9;
-    
+    opacity: .75;
 
   }
 
