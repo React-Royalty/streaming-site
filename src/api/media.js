@@ -4,8 +4,8 @@
 export async function fetchMedia() {
   try {
     const response = await fetch(
-      // 'https://streaming-site.onrender.com/api/media',
-      `http://localhost:8080/api/media`,
+      'https://streaming-site.onrender.com/api/media',
+      // `http://localhost:8080/api/media`,
       {
         headers: {
           "Content-Type": "application/json"
