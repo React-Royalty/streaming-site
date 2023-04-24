@@ -104,6 +104,36 @@
     }
   }
 
+  &__number-container {
+    display: flex;
+    align-items: center;
+
+    &__number {
+      height: 22rem;
+    }
+  }
+
+  &__tall-card {
+    position: absolute;
+    left: -20px;
+    z-index: 1;
+    height: 22rem;
+    cursor: pointer;
+    border-radius: 3px;
+    transitioN: all .4s;
+    position: relative;
+    opacity: .9;
+    
+    &:hover {
+      opacity: 1;
+      transform: scale(.9);
+
+      @media only screen and (max-width: $bp-smallest) {
+        transform: scale(1);
+      }
+    }
+  }
+
   .empty {
     background-color: #141414;
   }

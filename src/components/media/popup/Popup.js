@@ -86,8 +86,8 @@ function Popup() {
         </section>
 
         <SimilarMedia />
-        { detailedMedia ? <AboutMedia media={detailedMedia}/> : null }
-
+        {/* { detailedMedia ? <AboutMedia media={detailedMedia}/> : null } */}
+        <AboutMedia media={detailedMedia}/>
       </div>
     </div>
   );

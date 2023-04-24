@@ -24,8 +24,8 @@ export async function fetchMedia() {
 export async function fetchMediaByTitle(title) {
   try {
     const response = await fetch(
-      // `https://streaming-site.onrender.com/api/media/title/${title}`,
-      `http://localhost:8080/api/media/title/${title}`,
+      `https://streaming-site.onrender.com/api/media/title/${title}`,
+      // `http://localhost:8080/api/media/title/${title}`,
       {
         headers: {
           "Content-Type": "application/json"

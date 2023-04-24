@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import { fetchCategories } from '../../api/categories';
+import { fetchCategories, fetchHomepageCategories } from '../../api/categories';
 import { fetchMedia, fetchMediaByTitle } from '../../api/media';
 import { meFetch } from '../../api/users';
 
@@ -14,7 +14,8 @@ function App() {
   const [ userData, setUserData ] = useState({});
   const [ featuredMedia, setFeaturedMedia ] = useState({});
   const [ media, setMedia ] = useState([]);
-  const [ mediaByCategory, setMediaByCategory ] = useState([]);
+  const [ homepageCategories, setHomepageCategories ] = useState([]);
+  const [ specialHomepageCategories, setSpecialHomepageCategories ] = useState([]);
   const [ detailedMediaTitle, setDetailedMediaTitle ] = useState({});
   const [ detailedMediaToggle, setDetailedMediaToggle ] = useState(false);
 
@@ -27,21 +28,22 @@ function App() {
 
 
   async function getMedia() {
-    const categoriesFetchData = await fetchCategories();
+    const homepageCategoriesFetchData = await fetchHomepageCategories();
     const mediaFetchData = await fetchMedia();
     const featuredMediaFetchData = await fetchMediaByTitle("Spider-Man: Into the Spider-Verse");
 
-    if ( categoriesFetchData.success && mediaFetchData.success && featuredMediaFetchData.success ) {
+    if ( homepageCategoriesFetchData.success && mediaFetchData.success && featuredMediaFetchData.success ) {
       setMedia(mediaFetchData.allMedia);
       // console.log("media!", mediaFetchData.media);
-      setMediaByCategory(categoriesFetchData.categories);
+      setHomepageCategories(homepageCategoriesFetchData.categories.homepage);
+      setSpecialHomepageCategories(homepageCategoriesFetchData.categories.special);
       // console.log("categories!", categoriesFetchData.categories);
       
       setFeaturedMedia(featuredMediaFetchData.media);
       console.log("featured!", featuredMedia);
 
     } else {
-      console.log( categoriesFetchData.message );
+      console.log( homepageCategoriesFetchData.message );
       console.log( mediaFetchData.message );
       console.log( featuredMedia.message );
 
@@ -65,7 +67,7 @@ function App() {
   return (
     <div>
 
-      <Outlet context={{ loggedIn, setLoggedIn, userData, setUserData, featuredMedia, setFeaturedMedia, media, setMedia, mediaByCategory, setMediaByCategory, detailedMediaTitle, setDetailedMediaTitle, detailedMediaToggle, setDetailedMediaToggle }} />
+      <Outlet context={{ loggedIn, setLoggedIn, userData, setUserData, featuredMedia, setFeaturedMedia, media, setMedia, homepageCategories, setHomepageCategories, specialHomepageCategories, setSpecialHomepageCategories, detailedMediaTitle, setDetailedMediaTitle, detailedMediaToggle, setDetailedMediaToggle }} />
 
     </div>
   )
