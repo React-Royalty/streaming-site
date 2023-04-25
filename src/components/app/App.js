@@ -12,13 +12,18 @@ function App() {
 
   const [ loggedIn, setLoggedIn ] = useState(false);
   const [ userData, setUserData ] = useState({});
-  const [ featuredMedia, setFeaturedMedia ] = useState({});
+
   const [ media, setMedia ] = useState([]);
+  const [ featuredMedia, setFeaturedMedia ] = useState({});
   const [ homepageCategories, setHomepageCategories ] = useState([]);
   const [ specialHomepageCategories, setSpecialHomepageCategories ] = useState([]);
+
   const [ detailedMediaTitle, setDetailedMediaTitle ] = useState({});
   const [ detailedMediaToggle, setDetailedMediaToggle ] = useState(false);
 
+  const [ searchTerm, setSearchTerm ] = useState("");
+  const [ searchResultsMedia, setSearchResultsMedia ] = useState([]);
+  const [ matchingTerms, setMatchingTerms ] = useState([]);
 
 
   useEffect(() => {
@@ -67,7 +72,7 @@ function App() {
   return (
     <div>
 
-      <Outlet context={{ loggedIn, setLoggedIn, userData, setUserData, featuredMedia, setFeaturedMedia, media, setMedia, homepageCategories, setHomepageCategories, specialHomepageCategories, setSpecialHomepageCategories, detailedMediaTitle, setDetailedMediaTitle, detailedMediaToggle, setDetailedMediaToggle }} />
+      <Outlet context={{ loggedIn, setLoggedIn, userData, setUserData, featuredMedia, setFeaturedMedia, media, setMedia, homepageCategories, setHomepageCategories, specialHomepageCategories, setSpecialHomepageCategories, detailedMediaTitle, setDetailedMediaTitle, detailedMediaToggle, setDetailedMediaToggle, searchTerm, setSearchTerm, searchResultsMedia, setSearchResultsMedia, matchingTerms, setMatchingTerms }} />
 
     </div>
   )

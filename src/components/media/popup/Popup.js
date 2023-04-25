@@ -26,7 +26,7 @@ function Popup() {
   async function fetchDetailedMedia() {
     const mediaByTitleFetchData = await fetchMediaByTitle(detailedMediaTitle);
     if (mediaByTitleFetchData.success) {
-      console.log("the DETAILED MEDIA!!! bitch", mediaByTitleFetchData.media)
+      // console.log("the DETAILED MEDIA!!! bitch", mediaByTitleFetchData.media)
       setDetailedMedia(mediaByTitleFetchData.media);
     }
   }
@@ -54,7 +54,7 @@ function Popup() {
       {/* onFocus={()=>console.log("focused")} onBlur={(event) => unselectDetailedMedia(event)} */}
 
         <header>
-          { // TODO: make this loader work
+          {
             detailedMedia.featuredPoster ? 
               <img className="featured-poster" src={detailedMedia.featuredPoster.image} ></img>
               :
