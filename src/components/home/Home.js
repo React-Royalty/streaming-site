@@ -7,11 +7,12 @@ import Slider from "./Slider";
 import LoadingSlider from "./LoadingSlider";
 import Popup from "../media/popup/Popup";
 import NumberedSlider from "./NumberedSlider";
+import SearchResults from "./SearchResults";
 
 
 const Home = () => {
 
-  const { homepageCategories, specialHomepageCategories, detailedMediaToggle } = useOutletContext();
+  const { homepageCategories, specialHomepageCategories, detailedMediaToggle, searchTerm } = useOutletContext();
 
   const [ trendingNowCategory, setTrendingNowCategory ] = useState({});
   const [ topTenMoviesCategory, setTopTenMoviesCategory ] = useState({});
@@ -41,8 +42,7 @@ const Home = () => {
 
   return (
     <div>
-
-      <div className={ detailedMediaToggle ? "noscroll" : "home" }>
+      <div className={ detailedMediaToggle || searchTerm ? "noscroll blur home" : "home" }>
         <Nav />
         <Featured />
         {
@@ -63,7 +63,9 @@ const Home = () => {
       {
         detailedMediaToggle ? <Popup /> : null
       }
-
+      {
+        searchTerm ? <SearchResults /> : null
+      }
     </div>
   );
 }

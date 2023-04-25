@@ -6,8 +6,8 @@ import App from "./components/app/App"
 import Home from "./components/home/Home";
 import ErrorPage from "./components/app/ErrorPage";
 import Profile from "./components/user/Profile";
-import Login from "./components/user/Login";
 import Register from "./components/user/Register";
+import SearchResults from "./components/home/SearchResults";
 
 
 const appElement = document.getElementById('app');
