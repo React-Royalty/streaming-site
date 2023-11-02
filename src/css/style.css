@@ -170,8 +170,7 @@ body {
   /* Internet Explorer/Edge */
   user-select: none;
   /* Non-prefixed version, currently
-                                supported by Chrome, Edge, Opera and Firefox */
-  transition: all .3s ease-in-out; }
+                                supported by Chrome, Edge, Opera and Firefox */ }
   .slider__title {
     font-size: 3rem;
     font-family: "Oswald", sans-serif;
@@ -196,6 +195,7 @@ body {
     overflow: scroll;
     box-sizing: border-box;
     width: 100vw;
+    transition: all 1s ease-in-out;
     position: relative;
     /* Chrome, Safari and Opera */
     /* IE, Edge and Firefox */
