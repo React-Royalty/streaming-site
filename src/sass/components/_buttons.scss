@@ -12,6 +12,7 @@
   display: inline-block;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   // &__icon {
 
@@ -21,6 +22,35 @@
   //   border: 1px solid blue;
   // }
 
+  &--watch, 
+  &--logout {
+    padding: 1rem 2rem;
+    background-color: $logo-blue;
+    border-radius: 1rem;
+    color: white;
+    width: 18rem;
+    text-align: center;
+    transition: all .2s ease-in-out;
+    box-shadow: 3px 3px 3px darken(white, 80%);
+
+    &:hover {
+      transform: translateY(-8%);
+      box-shadow: 5px 5px 5px darken(white, 30%);
+    }
+
+    &:active {
+      transform: translate(0);
+      box-shadow: 3px 3px 3px darken(white, 80%);
+    }
+
+    &:not(:last-child) {
+      margin: 1rem;
+    }
+  }
+
+  &--logout {
+    background-color: darken($logo-lightblue, 15);
+  }
 
   &--featured {
     margin: 1rem;

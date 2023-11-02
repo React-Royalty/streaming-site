@@ -1,0 +1,24 @@
+// Margins
+.m-sm {
+    margin: .5rem;
+}
+
+.m-md {
+    margin: 1rem;
+}
+
+// flexbox
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+// Division Lines
+.line-sm {
+    width: 15rem;
+    height: .25rem;
+    background-color: white;
+    margin: .75rem 0;
+}

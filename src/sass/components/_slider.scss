@@ -9,6 +9,8 @@
           user-select: none; /* Non-prefixed version, currently
                                 supported by Chrome, Edge, Opera and Firefox */
 
+    transition: all .3s ease-in-out;
+
   &__title {
     font-size: 3rem;
     font-family: $font-header-2;

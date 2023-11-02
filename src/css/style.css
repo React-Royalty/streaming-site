@@ -63,12 +63,50 @@ body {
   -webkit-text-fill-color: transparent;
   margin: 5rem; }
 
+.m-sm {
+  margin: .5rem; }
+
+.m-md {
+  margin: 1rem; }
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.line-sm {
+  width: 15rem;
+  height: .25rem;
+  background-color: white;
+  margin: .75rem 0; }
+
 .btn {
   text-decoration: none;
   border: none;
   display: inline-block;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  cursor: pointer; }
+  .btn--watch, .btn--logout {
+    padding: 1rem 2rem;
+    background-color: #2E4DB1;
+    border-radius: 1rem;
+    color: white;
+    width: 18rem;
+    text-align: center;
+    transition: all .2s ease-in-out;
+    box-shadow: 3px 3px 3px #333333; }
+    .btn--watch:hover, .btn--logout:hover {
+      transform: translateY(-8%);
+      box-shadow: 5px 5px 5px #b3b3b3; }
+    .btn--watch:active, .btn--logout:active {
+      transform: translate(0);
+      box-shadow: 3px 3px 3px #333333; }
+    .btn--watch:not(:last-child), .btn--logout:not(:last-child) {
+      margin: 1rem; }
+  .btn--logout {
+    background-color: #7d94e4; }
   .btn--featured {
     margin: 1rem;
     display: inline-block;
@@ -132,7 +170,8 @@ body {
   /* Internet Explorer/Edge */
   user-select: none;
   /* Non-prefixed version, currently
-                                supported by Chrome, Edge, Opera and Firefox */ }
+                                supported by Chrome, Edge, Opera and Firefox */
+  transition: all .3s ease-in-out; }
   .slider__title {
     font-size: 3rem;
     font-family: "Oswald", sans-serif;
@@ -783,6 +822,29 @@ body {
       gap: 5px;
       margin: 0px 50px 50px 50px; }
 
-.profile h1 {
-  margin-top: 400px;
-  color: hotpink; }
+.profile {
+  height: 95svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2E4DB1;
+  position: relative; }
+  .profile__bg {
+    position: absolute;
+    height: 95svh;
+    width: 100svw;
+    z-index: 1;
+    filter: blur(4px);
+    background-image: url("https://wallpapers.com/images/hd/awesome-media-art-spider-man-into-the-spider-verse-n4au1zyeu44hajjc.jpg"); }
+  .profile__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    padding: 5rem;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 2; }
+  .profile h1 {
+    color: #BCC8F1; }

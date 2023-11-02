@@ -31,6 +31,8 @@ function App() {
     checkForUser();
   }, [])
 
+  console.log('testing, ', userData.username)
+
 
   async function getMedia() {
     const homepageCategoriesFetchData = await fetchHomepageCategories();

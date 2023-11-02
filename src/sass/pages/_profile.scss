@@ -1,12 +1,35 @@
 .profile {
-  // background-color: lavender;
-  // margin: auto;
-  // height: 800px;
+  height: 95svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $logo-blue;
+  position: relative;
+  // background-image: url('https://wallpapers.com/images/hd/awesome-media-art-spider-man-into-the-spider-verse-n4au1zyeu44hajjc.jpg');
 
-  h1 {
-    margin-top: 400px;
-    color: hotpink;
+  &__bg {
+    position: absolute;
+    height: 95svh;
+    width: 100svw;
+    z-index: 1;
+    filter: blur(4px);
+    background-image: url('https://wallpapers.com/images/hd/awesome-media-art-spider-man-into-the-spider-verse-n4au1zyeu44hajjc.jpg');
   }
 
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    padding: 5rem;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  h1 {
+    color: $logo-lightblue;
+  }
 
 }

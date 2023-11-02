@@ -7,7 +7,7 @@ import Login from "./Login";
 
 function Profile() {
 
-  const { loggedIn, setLoggedIn, setUserData } = useOutletContext();
+  const { loggedIn, setLoggedIn, userData, setUserData } = useOutletContext();
 
   function logOut() {
     localStorage.removeItem("token");
@@ -26,8 +26,18 @@ function Profile() {
       {
         loggedIn ? 
           <section className="profile">
-            <h1>PROFILE</h1>
-            <div onClick={logOut}>logout</div>
+            <div className="profile__bg">hello</div>
+            <div className="profile__box">
+              <h1>PROFILE</h1>
+              <span className='line-sm'>&nbsp;</span>
+              <div>Welcome {userData.username}</div>
+
+              <div className='m-sm center'>
+                <Link to='/' className='btn btn--watch'>Watch Marathon</Link>
+                <div className='btn btn--logout' onClick={logOut}>Logout</div>
+              </div>
+
+            </div>
           </section>
         :
           <Login />
