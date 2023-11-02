@@ -23,10 +23,8 @@ const Home = () => {
 
 
   useEffect(() => {
-    // console.log("specials", specialHomepageCategories);
     const trending = specialHomepageCategories.filter(category => category.name === "Trending Now");
     setTrendingNowCategory(trending[0]);  // TODO: HELLLOOOOO WHERE IS THIS
-    // console.log("trending now !", trending[0]);
 
     const topMovies = specialHomepageCategories.filter(category => category.name === "Top 10 Movies in the U.S. Today");
     setTopTenMoviesCategory(topMovies[0]);

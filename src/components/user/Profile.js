@@ -10,7 +10,6 @@ function Profile() {
   const { loggedIn, setLoggedIn, setUserData } = useOutletContext();
 
   function logOut() {
-    // console.log("logging out");
     localStorage.removeItem("token");
     setUserData({});
     setLoggedIn(false);

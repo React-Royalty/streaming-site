@@ -6,7 +6,6 @@ function BonusInfo({ media }) {
   //* MEDIA POP UP BONUS INFO (RIGHT SIDE COLUMN) 
   // IF EXISTS: cast, genres, vibes
 
-
   return (
     <div className="detailed-media__bonus-info">
       { media.organizedCrew && media.organizedCrew.cast.length ? <DetailList title="Cast" contents={media.organizedCrew.cast} /> : null }

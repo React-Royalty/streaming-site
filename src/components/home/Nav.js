@@ -14,9 +14,7 @@ function Nav() {
       <nav className={ searchTerm !== "" ? "home-nav noblur" : "home-nav"}> 
         <img className="home-nav__logo home-nav__logo--large" alt="logo" src="https://i.imgur.com/WSTq2Le.png"/>
         <img className="home-nav__logo home-nav__logo--small" alt="logo" src="https://i.imgur.com/kfYpP2i.png"/>
-        {/* <div className="home-nav__navigation-container">
 
-        </div> */}
         <SearchBar />
 
         <div className="home-nav__user-nav">

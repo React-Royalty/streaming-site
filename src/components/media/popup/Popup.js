@@ -26,14 +26,12 @@ function Popup() {
   async function fetchDetailedMedia() {
     const mediaByTitleFetchData = await fetchMediaByTitle(detailedMediaTitle);
     if (mediaByTitleFetchData.success) {
-      // console.log("the DETAILED MEDIA!!! bitch", mediaByTitleFetchData.media)
       setDetailedMedia(mediaByTitleFetchData.media);
     }
   }
 
 
   async function unselectDetailedMedia(event) {
-    // Removed onBlur from "detailed-media" div. added parent container "fuckity". which uses function clickOutDetailedMedia
     setDetailedMediaToggle(false);
     setDetailedMediaTitle("");
     setDetailedMedia({});
@@ -49,9 +47,8 @@ function Popup() {
 
 
   return (
-    <div className="fuckity" id="detailed-media-parent" onClick={clickOutDetailedMedia} style={{position: "fixed", display: "flex", width: "100vw", height: "100vh", alignItems: "flex-start", justifyContent: "center", overflowY:"scroll"}}>
+    <div id="detailed-media-parent" onClick={clickOutDetailedMedia} style={{position: "fixed", display: "flex", width: "100vw", height: "100vh", alignItems: "flex-start", justifyContent: "center", overflowY:"scroll"}}>
       <div className="detailed-media" >
-      {/* onFocus={()=>console.log("focused")} onBlur={(event) => unselectDetailedMedia(event)} */}
 
         <header>
           {

@@ -6,7 +6,6 @@ function AboutMedia({ media }) {
   //* MEDIA POP UP ABOUT INFO (VERY BOTTOM) 
   // IF EXISTS: directors, creators, cast, writers, genres, vibes, maturity rating
 
-
   return (
     <div>
       <h1>About {media.title}</h1>

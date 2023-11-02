@@ -10,7 +10,6 @@ function SearchResults() {
 
 
   useEffect(() => {
-    // console.log("matching terms on search results'", matchingTerms)
     // TODO: MAKE STUFF SHOW UP WHEN SUGGESTION IS CLICKED
   }, [searchTerm])
 
@@ -34,7 +33,7 @@ function SearchResults() {
 
 
   return (
-    <div className="fuckity" id="search-results-parent" onClick={clickOutSearchResults} style={{position: "fixed", display: "flex", width: "100vw", height: "100vh", alignItems: "flex-start", justifyContent: "center", overflowY:"scroll"}}>
+    <div id="search-results-parent" onClick={clickOutSearchResults} style={{position: "fixed", display: "flex", width: "100vw", height: "100vh", alignItems: "flex-start", justifyContent: "center", overflowY:"scroll"}}>
       <div className="search-results">
         {
           matchingTerms.length ? <SearchSuggestions contents={matchingTerms} /> : null

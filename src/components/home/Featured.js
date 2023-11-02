@@ -8,13 +8,6 @@ import { BiInfoCircle } from 'react-icons/bi';
 function Featured() {
 
   const { media, setDetailedMedia, setDetailedMediaToggle, featuredMedia } = useOutletContext();
-  // console.log("featuredMedia", featuredMedia);
-
-
-  // useEffect(() => {
-  //   determinePosters(); // TODO: FIX! moved this bs and get rid of hard coded image urls
-  // }, [])
-
 
   async function determinePosters() {
     console.log("featuredMedia.posters", featuredMedia.posters);
@@ -26,14 +19,12 @@ function Featured() {
     console.log("FEATURED MEDIA DATA", featuredMedia)
   }
 
-
   function handleMoreInfoClick() {
     const selectedTitle = "Spider-Man: Into the Spider-Verse"
     const foundMedia = media.filter(indivMedia => indivMedia.title === selectedTitle);
     setDetailedMedia(foundMedia[0]);
     setDetailedMediaToggle(true);
   }
-
 
   return (
     <section className="featured">

@@ -24,7 +24,6 @@ function SearchBar() {
       return true;
     } 
     if (media.description.toLowerCase().includes(text.toLowerCase())) {
-      // console.log("hey that's here in the description for ...", media.title)
       const matchingWordIndex = media.description.toLowerCase().indexOf(text.toLowerCase());
       const matchingSubstring = media.description.toLowerCase().slice(matchingWordIndex);
       if ( media.description.charAt(matchingWordIndex - 1) === " ") {

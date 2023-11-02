@@ -24,7 +24,6 @@ const Slider = ({ category, categorysMedia }) => {
   function handleCardClick(event) {
     const selectedCardAlt = (event.target.alt);
     const selectedTitle = selectedCardAlt.slice(0, -" Poster Title Card".length);
-    // const foundMedia = media.filter(indivMedia => indivMedia.title === selectedTitle);
     setDetailedMediaTitle(selectedTitle);
     setDetailedMediaToggle(true);
   }
